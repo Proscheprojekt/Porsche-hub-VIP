@@ -1,14 +1,28 @@
 <!DOCTYPE html>
+<!-- Startseite des Porsche-Schulprojekts. Die Seite nutzt HTML für die Struktur, CSS für das Design und JavaScript für den automatischen Medien-Slider. -->
 <html lang="de">
 <head>
+  <!-- Zeichensatz: UTF-8 unterstützt Umlaute und Sonderzeichen. -->
   <meta charset="UTF-8" />
+
+  <!-- Responsive Darstellung: wichtig für Handy, Tablet und Desktop. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser-Titel der Startseite. -->
   <title>Porsche Experience | Schulprojekt</title>
+
+  <!-- Einbindung der CSS-Datei für das Styling der Startseite. -->
   <link rel="stylesheet" href="main web/style.css" />
 </head>
 <body>
 
+  <!-- =========================================================
+       HEADER / KOPFBEREICH
+       Der Header ist auf allen Seiten gleich aufgebaut:
+       Logo links, Schnellzugriffe, Suche, mobiles Menü und Navigation.
+       ========================================================= -->
   <header class="site-header">
+    <!-- Markenbereich mit Logo und Seitentitel -->
     <div class="brand-area">
       <img src="main web/images/porsche.png" alt="Logo Porsche Experience" class="brand-logo" />
       <div class="brand-copy">
@@ -17,88 +31,113 @@
       </div>
     </div>
 
+    <!-- Schnellzugriff-Icons: optische Navigation für Kontakt, Rechtliches, Fragen und Shop -->
     <div class="action-area" aria-label="Schnellzugriff">
+      <!-- E-Mail-Link: öffnet beim Anklicken das Standard-Mailprogramm -->
       <a href="mailto:info@example.de" class="icon-link" aria-label="E-Mail">
+        <!-- SVG-Icon für Briefumschlag -->
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"/></svg>
       </a>
 
+      <!-- Link zu rechtlichen Informationen innerhalb der Seite -->
       <a href="#recht" class="icon-link" aria-label="Paragraf und Rechtliches">
+        <!-- SVG-Icon für Paragraf/Rechtliches -->
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a1 1 0 0 1 1 1v2h3a4 4 0 0 1 0 8h-3v2h3a4 4 0 1 1 0 8H9a1 1 0 1 1 0-2h2v-6H8a4 4 0 1 1 0-8h3V3a1 1 0 0 1 1-1Zm1 5v4h3a2 2 0 0 0 0-4h-3Zm-2 2H8a2 2 0 1 0 0 4h3V9Zm2 8v4h3a2 2 0 1 0 0-4h-3Z"/></svg>
       </a>
 
+      <!-- Link zu Fragen und Antworten innerhalb der Seite -->
       <a href="#qa" class="icon-link" aria-label="Fragen und Antworten">
+        <!-- SVG-Icon für Fragen und Antworten -->
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-2.9.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"/></svg>
       </a>
 
+      <!-- Hervorgehobener Shop-Link mit rotem Akzent -->
       <a href="#shop" class="icon-link cart-highlight" aria-label="Einkaufswagen">
+        <!-- SVG-Icon für Einkaufswagen -->
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"/></svg>
       </a>
     </div>
 
+    <!-- Suchfeld: aktuell optisch eingebunden, aber noch ohne echte Suchfunktion -->
     <form class="search-area" role="search">
+      <!-- SVG-Icon für Lupe -->
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"/></svg>
       <input type="search" placeholder="Suchen..." aria-label="Suche" />
     </form>
 
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen" aria-expanded="false">
+    <!-- Hamburger-Button für kleinere Bildschirme; wird per JavaScript geöffnet und geschlossen -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen" aria-expanded="false" type="button">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Hauptnavigation zwischen den einzelnen Projektseiten -->
     <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
-       <a href="index.html" >Home</a>
-     <a href="geschichte.html" >Geschichte</a>
-      <a href="modelle.html" >Modelle</a>
-      <a href="Technik.html" >Technik</a>
-      <a href="Galerie.html" >Galerie</a>
-      <a href="Projekt.html" class="nav-active" >Projekt</a>
+      <a href="index.html" class="nav-active">Home</a>
+      <a href="geschichte.html">Geschichte</a>
+      <a href="modelle.html">Modelle</a>
+      <a href="Technik.html">Technik</a>
+      <a href="Galerie.html">Galerie</a>
+      <a href="Projekt.html" class="nav-activeP">Projekt</a>
     </nav>
   </header>
 
+  <!-- =========================================================
+       HAUPTINHALT DER STARTSEITE
+       Enthält Abstand, Hero-Karussell und einen Projektbereich.
+       ========================================================= -->
   <main>
+    <!-- Abstand unter dem fixierten Header, damit der Slider optisch freier steht. -->
     <section class="intro-space" aria-hidden="true"></section>
 
+    <!-- Hero-Karussell: zeigt automatisch Bilder und ein Video nacheinander an. -->
     <section class="hero-carousel" id="projekt" aria-label="Porsche Experience Karussell">
+      <!-- Track enthält alle einzelnen Slides des Karussells. -->
       <div class="carousel-track">
 
+        <!-- Slide 1: Bild, wird 3000 Millisekunden angezeigt. -->
         <article class="carousel-slide is-active" data-type="image" data-duration="3000">
           <img src="main web/images/1.png" alt="Porsche Motiv als Bild" />
-      
         </article>
 
+        <!-- Slide 2: Video, wird 85000 Millisekunden angezeigt. -->
         <article class="carousel-slide" data-type="video" data-duration="85000">
           <video muted playsinline preload="metadata">
-            <source src="main web/videos/video3.mp4" type="video/mp4" />
+            <!-- Dateiname wurde an den vorhandenen Ordner angepasst: Video3.mp4. -->
+            <source src="main web/videos/Video3.mp4" type="video/mp4" />
           </video>
-         
         </article>
 
-        <article class="carousel-slide " data-type="image" data-duration="3000">
-        <img src="main web/images/22.png" alt="Porsche Motiv als Bild"  />
-          </video>
-         
+        <!-- Slide 3: weiteres Bild, wird 3000 Millisekunden angezeigt. -->
+        <article class="carousel-slide" data-type="image" data-duration="3000">
+          <img src="main web/images/22.png" alt="Porsche Motiv als Bild" />
         </article>
-
       </div>
 
-      <button class="carousel-control carousel-prev" id="prevSlide" aria-label="Vorheriges Motiv">‹</button>
-      <button class="carousel-control carousel-next" id="nextSlide" aria-label="Nächstes Motiv">›</button>
+      <!-- Manuelle Steuerung: vorheriges Motiv anzeigen. -->
+      <button class="carousel-control carousel-prev" id="prevSlide" aria-label="Vorheriges Motiv" type="button">‹</button>
 
+      <!-- Manuelle Steuerung: nächstes Motiv anzeigen. -->
+      <button class="carousel-control carousel-next" id="nextSlide" aria-label="Nächstes Motiv" type="button">›</button>
+
+      <!-- Punkte-Navigation: zeigt den aktuellen Slide und erlaubt direkten Wechsel. -->
       <div class="carousel-dots" aria-label="Karussell Auswahl">
-        <button class="dot is-active" data-index="0" aria-label="Motiv 1"></button>
-        <button class="dot" data-index="1" aria-label="Motiv 2"></button>
-        <button class="dot" data-index="2" aria-label="Motiv 3"></button>
+        <button class="dot is-active" data-index="0" aria-label="Motiv 1" type="button"></button>
+        <button class="dot" data-index="1" aria-label="Motiv 2" type="button"></button>
+        <button class="dot" data-index="2" aria-label="Motiv 3" type="button"></button>
       </div>
     </section>
 
-   <section class="gallery-section" id="gallery">
+    <!-- Kurzer Projektbereich als Abschluss der Startseite. -->
+    <section class="gallery-section" id="projekt-info">
       <div class="section-heading">
         <h2 class="eyebrow">Unser Schulprojekt</h2>
-    
-      
       </div>
     </section>
+  </main>
+
+  <!-- JavaScript wird am Ende geladen, damit alle HTML-Elemente vorher vorhanden sind. -->
   <script src="main web/script.js"></script>
 </body>
 </html>
