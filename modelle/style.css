@@ -239,7 +239,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 12px 28px rgba(226, 57, 52, 0.32);
 }
-.nav-activeP {
+.main-nav .nav-activeP {
   color:  white;
   background: linear-gradient(135deg, var(--gold), #d3a65f);
   border: 1px solid rgba(255, 255, 255, 0.18);
