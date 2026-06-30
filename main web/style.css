@@ -1,0 +1,613 @@
+/* =========================================================
+   main web/style.css
+   Ausführlich kommentiertes Stylesheet für das Porsche-Webprojekt.
+   Die Kommentare erklären Layout, Farben, Effekte, Slider und Responsive Design.
+   ========================================================= */
+
+/* Globaler Reset: sorgt für berechenbare Abstände und einheitliches Box-Modell. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Zentrale Design-Variablen für Farben, Linien, Radien und Schatten. */
+:root {
+  /* Grundfarbe der gesamten Webseite. */
+  --bg: #09090d;
+  /* Transparente Flächenfarbe für Karten und Header. */
+  --panel: rgba(255, 255, 255, 0.075);
+  --panel-strong: rgba(255, 255, 255, 0.13);
+  /* Haupttextfarbe. */
+  --text: #f6f2ea;
+  /* Abgeschwächte Textfarbe für Beschreibungen. */
+  --muted: #b9bac3;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  /* Porsche-ähnlicher roter Akzent. */
+  --red: #e23934;
+  --red-strong: #ff433e;
+  /* Goldener Akzent für Labels und Highlights. */
+  --gold: #d3a65f;
+  --radius: 22px;
+  --shadow: 0 26px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* Aktiviert weiches Scrollen bei Sprüngen zu Bereichen innerhalb der Seite. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Grundlayout der Seite: Schrift, Hintergrund, Textfarbe und Seitenabstand. */
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(216, 181, 109, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(216, 181, 109, 0.18), transparent 28%),
+    linear-gradient(180deg, #151515, #070707 44%, #111);
+  padding: 18px;
+}
+
+/* Links übernehmen die Textfarbe des umgebenden Elements. */
+a {
+  color: inherit;
+}
+
+/* Sticky Header mit Glas-Effekt, Grid-Layout und hoher Ebene über dem Inhalt. */
+.site-header {
+  position: sticky;
+  top: 14px;
+  z-index: 50;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto minmax(220px, 320px) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+/* Gruppiert Logo und Textmarke im Header. */
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 290px;
+}
+
+/* Formatiert das Porsche-Logo im Header. */
+.brand-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  padding: 7px;
+}
+
+/* Kleine Label-Texte mit goldener Akzentfarbe und Großbuchstaben. */
+.brand-copy span,
+.kicker {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Haupttitel der Marke im Header. */
+.brand-copy h1 {
+  margin-top: 5px;
+  font-size: clamp(22px, 2vw, 32px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+/* Bereich für die Schnellzugriff-Icons im Header. */
+.action-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Quadratische Icon-Buttons mit Glas-Hintergrund und Hover-Animation. */
+.icon-link {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid var(--line);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+/* Größe und Farbe der SVG-Icons innerhalb der Icon-Buttons. */
+.icon-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Hover-Effekt für Icon-Buttons. */
+.icon-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.095);
+  border-color: var(--line-strong);
+}
+
+/* Rote Hervorhebung für das Einkaufswagen-Icon. */
+.cart-highlight {
+  position: relative;
+  background: linear-gradient(135deg, rgba(226, 57, 52, 0.35), rgba(226, 57, 52, 0.13));
+  border-color: rgba(226, 57, 52, 0.65);
+  box-shadow: 0 0 24px rgba(226, 57, 52, 0.22);
+}
+
+/* Kleiner roter Statuspunkt am Einkaufswagen-Icon. */
+.cart-highlight::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red-strong);
+  box-shadow: 0 0 14px rgba(255, 67, 62, 0.8);
+}
+
+/* Suchfeld im Header mit Icon und Eingabefeld. */
+.search-area {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 15px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid var(--line);
+}
+
+/* Lupe im Suchfeld. */
+.search-area svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--muted);
+  flex: 0 0 auto;
+}
+
+/* Eingabefeld der Suche ohne Standardrahmen. */
+.search-area input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  background: transparent;
+  font-size: 15px;
+}
+
+/* Farbe des Platzhaltertexts im Suchfeld. */
+.search-area input::placeholder {
+  color: rgba(246, 246, 247, 0.56);
+}
+
+/* Hauptnavigation mit flexibler horizontaler Anordnung. */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Gestaltung der Navigationslinks. */
+.main-nav a {
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: rgba(246, 246, 247, 0.88);
+  font-size: 15px;
+  font-weight: 800;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+/* Hover-Zustand der Navigationslinks. */
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.075);
+  transform: translateY(-1px);
+}
+
+/* Aktive Navigationsseite mit rotem Verlauf. */
+.main-nav .nav-active{
+  color: white;
+  background: linear-gradient(135deg, var(--red), #bf211e);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(226, 57, 52, 0.32);
+}
+.nav-activeP {
+  color:  white;
+  background: linear-gradient(135deg, var(--gold), #d3a65f);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(247, 224, 181, 0.32);
+}
+
+/* Hamburger-Menü-Button für kleinere Bildschirme. */
+.mobile-menu-btn {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.055);
+  cursor: pointer;
+}
+
+/* Drei Linien innerhalb des Hamburger-Menüs. */
+.mobile-menu-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background: white;
+  border-radius: 999px;
+}
+
+/* Optischer Abstand zwischen Header und Hero-Karussell. */
+.intro-space {
+  height: clamp(38px, 7vw, 96px);
+}
+
+/* Großer Medien-Slider auf der Startseite. */
+.hero-carousel {
+  position: relative;
+  height: clamp(480px, 68vw, 720px);
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid var(--line);
+  background: #050507;
+  box-shadow: var(--shadow);
+}
+
+/* Track und Slides werden absolut übereinander gelegt. */
+.carousel-track,
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+}
+
+/* Standardzustand eines Slides: unsichtbar. */
+.carousel-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 700ms ease, visibility 700ms ease;
+}
+
+/* Aktiver Slide: sichtbar und eingeblendet. */
+.carousel-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Medien füllen den kompletten Slider-Bereich. */
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Dunkler Overlay-Verlauf für bessere Lesbarkeit und Premium-Look. */
+.carousel-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0.46)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.68), transparent 45%);
+  pointer-events: none;
+}
+
+/* Textkarte innerhalb eines Slides. */
+.slide-content {
+  position: absolute;
+  z-index: 2;
+  left: clamp(24px, 6vw, 76px);
+  bottom: clamp(34px, 8vw, 92px);
+  max-width: min(650px, calc(100% - 48px));
+  padding: 26px 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(14px);
+}
+
+/* Große Headline innerhalb der Slide-Textkarte. */
+.slide-content h2 {
+  margin-top: 12px;
+  font-size: clamp(34px, 5vw, 70px);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+/* Beschreibungstext innerhalb der Slide-Textkarte. */
+.slide-content p:not(.kicker) {
+  margin-top: 16px;
+  color: rgba(246, 246, 247, 0.82);
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.55;
+}
+
+/* Pfeilbuttons zur manuellen Steuerung des Karussells. */
+.carousel-control {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  color: white;
+  background: rgba(0, 0, 0, 0.46);
+  cursor: pointer;
+  font-size: 42px;
+  line-height: 1;
+  transition: background 180ms ease, transform 180ms ease;
+}
+/* Einheitliche Innenabstände für größere Inhaltsbereiche. */
+.timeline-section,
+.gallery-section,
+.project-section {
+  padding: 86px clamp(18px, 5vw, 80px);
+}
+
+/* Zentrierter Überschriftenbereich einer Section. */
+.section-heading {
+  max-width: 780px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+/* Hover-Effekt der Karussell-Pfeile. */
+.carousel-control:hover {
+  background: rgba(226, 57, 52, 0.88);
+  transform: translateY(-50%) scale(1.04);
+}
+
+/* Position des linken Karussell-Pfeils. */
+.carousel-prev {
+  left: 22px;
+}
+
+/* Position des rechten Karussell-Pfeils. */
+.carousel-next {
+  right: 22px;
+}
+/* Kleine goldene Abschnittsüberschrift. */
+.eyebrow {
+  margin: 0;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  align-content: center;
+}
+/* Zentrierter Überschriftenbereich einer Section. */
+.section-heading {
+  max-width: 780px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+/* Große Abschnittsüberschriften. */
+.section-heading h2,
+.project-card h2 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 62px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+/* Beschreibungstexte in Sections und Projektkarten. */
+.section-heading p:not(.eyebrow),
+.project-card p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+}
+/* Punkte-Navigation unter dem Karussell. */
+.carousel-dots {
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(12px);
+}
+
+/* Einzelner Navigationspunkt des Karussells. */
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  cursor: pointer;
+  transition: width 180ms ease, background 180ms ease;
+}
+
+/* Aktiver Navigationspunkt des Karussells. */
+.dot.is-active {
+  width: 32px;
+  border-radius: 999px;
+  background: var(--red-strong);
+}
+
+/* Vorschau- oder Inhaltskarte unter dem Hauptbereich. */
+.content-preview {
+  margin-top: 32px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--panel-strong);
+}
+
+/* Überschrift innerhalb der Inhaltsvorschau. */
+.content-preview h2 {
+  margin-top: 8px;
+  font-size: clamp(26px, 3vw, 42px);
+  letter-spacing: -0.04em;
+}
+
+/* Text innerhalb der Inhaltsvorschau. */
+.content-preview p:not(.kicker) {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Responsive Anpassungen für den Header und das mobile Menü. */
+@media (max-width: 1260px) {
+  /* Sticky Header mit Glas-Effekt, Grid-Layout und hoher Ebene über dem Inhalt. */
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  /* Gruppiert Logo und Textmarke im Header. */
+  .brand-area {
+    grid-column: 1 / 2;
+  }
+
+  /* Hamburger-Menü-Button für kleinere Bildschirme. */
+  .mobile-menu-btn {
+    display: block;
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+
+  .action-area,
+  .search-area,
+  /* Hauptnavigation mit flexibler horizontaler Anordnung. */
+  .main-nav {
+    grid-column: 1 / -1;
+  }
+
+  /* Hauptnavigation mit flexibler horizontaler Anordnung. */
+  .main-nav {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Gestaltet den Bereich oder Zustand ".main-nav.is-open". */
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  /* Bereich für die Schnellzugriff-Icons im Header. */
+  .action-area {
+    justify-content: flex-start;
+  }
+}
+
+/* Responsive Anpassungen für Smartphones. */
+@media (max-width: 720px) {
+  /* Grundlayout der Seite: Schrift, Hintergrund, Textfarbe und Seitenabstand. */
+  body {
+    padding: 10px;
+  }
+
+  /* Sticky Header mit Glas-Effekt, Grid-Layout und hoher Ebene über dem Inhalt. */
+  .site-header {
+    top: 8px;
+    gap: 14px;
+    padding: 12px;
+  }
+
+  /* Gruppiert Logo und Textmarke im Header. */
+  .brand-area {
+    min-width: 0;
+    gap: 12px;
+  }
+
+  /* Formatiert das Porsche-Logo im Header. */
+  .brand-logo {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+  }
+
+  /* Haupttitel der Marke im Header. */
+  .brand-copy h1 {
+    font-size: 21px;
+  }
+
+  /* Gestaltet den Bereich oder Zustand ".brand-copy span". */
+  .brand-copy span {
+    font-size: 10px;
+  }
+
+  /* Bereich für die Schnellzugriff-Icons im Header. */
+  .action-area {
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  /* Quadratische Icon-Buttons mit Glas-Hintergrund und Hover-Animation. */
+  .icon-link {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+
+  /* Gestaltung der Navigationslinks. */
+  .main-nav a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* Großer Medien-Slider auf der Startseite. */
+  .hero-carousel {
+    height: 540px;
+    border-radius: 24px;
+  }
+
+  /* Textkarte innerhalb eines Slides. */
+  .slide-content {
+    left: 16px;
+    right: 16px;
+    bottom: 76px;
+    padding: 20px;
+  }
+
+  /* Pfeilbuttons zur manuellen Steuerung des Karussells. */
+  .carousel-control {
+    width: 44px;
+    height: 44px;
+    font-size: 32px;
+  }
+}
+/* Globaler Reset: sorgt für berechenbare Abstände und einheitliches Box-Modell. */
+* {
+  box-sizing: border-box;
+}
+
