@@ -1,28 +1,44 @@
+/* =========================================================
+   modelle/style.css
+   Ausführlich kommentiertes Stylesheet für das Porsche-Webprojekt.
+   Die Kommentare erklären Layout, Farben, Effekte, Slider und Responsive Design.
+   ========================================================= */
+
+/* Globaler Reset: sorgt für berechenbare Abstände und einheitliches Box-Modell. */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Zentrale Design-Variablen für Farben, Linien, Radien und Schatten. */
 :root {
+  /* Grundfarbe der gesamten Webseite. */
   --bg: #09090d;
+  /* Transparente Flächenfarbe für Karten und Header. */
   --panel: rgba(255, 255, 255, 0.075);
   --panel-strong: rgba(255, 255, 255, 0.13);
+  /* Haupttextfarbe. */
   --text: #f6f2ea;
+  /* Abgeschwächte Textfarbe für Beschreibungen. */
   --muted: #b9bac3;
   --line: rgba(255, 255, 255, 0.10);
   --line-strong: rgba(255, 255, 255, 0.18);
+  /* Porsche-ähnlicher roter Akzent. */
   --red: #e23934;
   --red-strong: #ff433e;
+  /* Goldener Akzent für Labels und Highlights. */
   --gold: #d3a65f;
   --radius: 22px;
   --shadow: 0 26px 80px rgba(0, 0, 0, 0.45);
 }
 
+/* Aktiviert weiches Scrollen bei Sprüngen zu Bereichen innerhalb der Seite. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Grundlayout der Seite: Schrift, Hintergrund, Textfarbe und Seitenabstand. */
 body {
   margin: 0;
   min-height: 100vh;
@@ -33,15 +49,18 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
+/* Grundregel für Bilder: responsiv und ohne unerwünschten Inline-Abstand. */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* Container für die komplette Seite. */
 .page {
   min-height: 100vh;
 }
 
+/* Sticky Header mit Glas-Effekt, Grid-Layout und hoher Ebene über dem Inhalt. */
 .site-header {
   position: sticky;
   top: 14px;
@@ -59,6 +78,7 @@ img {
   backdrop-filter: blur(18px);
 }
 
+/* Gruppiert Logo und Textmarke im Header. */
 .brand-area {
   display: flex;
   align-items: center;
@@ -66,6 +86,7 @@ img {
   min-width: 290px;
 }
 
+/* Formatiert das Porsche-Logo im Header. */
 .brand-logo {
   width: 76px;
   height: 76px;
@@ -76,6 +97,7 @@ img {
   padding: 7px;
 }
 
+/* Kleine Label-Texte mit goldener Akzentfarbe und Großbuchstaben. */
 .brand-copy span,
 .kicker {
   display: inline-block;
@@ -86,6 +108,7 @@ img {
   text-transform: uppercase;
 }
 
+/* Haupttitel der Marke im Header. */
 .brand-copy h1 {
   margin-top: 5px;
   font-size: clamp(22px, 2vw, 32px);
@@ -93,6 +116,7 @@ img {
   letter-spacing: -0.04em;
 }
 
+/* Bereich für die Schnellzugriff-Icons im Header. */
 .action-area {
   display: flex;
   align-items: center;
@@ -100,6 +124,7 @@ img {
   gap: 10px;
 }
 
+/* Quadratische Icon-Buttons mit Glas-Hintergrund und Hover-Animation. */
 .icon-link {
   width: 48px;
   height: 48px;
@@ -112,17 +137,20 @@ img {
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
+/* Größe und Farbe der SVG-Icons innerhalb der Icon-Buttons. */
 .icon-link svg {
   width: 22px;
   height: 22px;
   fill: white;
 }
 
+/* Hover-Effekt für Icon-Buttons. */
 .icon-link:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.095);
   border-color: var(--line-strong);
 }
+/* Suchfeld im Header mit Icon und Eingabefeld. */
 .search-area {
   height: 48px;
   display: flex;
@@ -134,6 +162,7 @@ img {
   border: 1px solid var(--line);
 }
 
+/* Lupe im Suchfeld. */
 .search-area svg {
   width: 20px;
   height: 20px;
@@ -141,6 +170,7 @@ img {
   flex: 0 0 auto;
 }
 
+/* Eingabefeld der Suche ohne Standardrahmen. */
 .search-area input {
   width: 100%;
   min-width: 0;
@@ -151,9 +181,11 @@ img {
   font-size: 15px;
 }
 
+/* Farbe des Platzhaltertexts im Suchfeld. */
 .search-area input::placeholder {
   color: rgba(246, 246, 247, 0.56);
 }
+/* Rote Hervorhebung für das Einkaufswagen-Icon. */
 .cart-highlight {
   position: relative;
   background: linear-gradient(135deg, rgba(226, 57, 52, 0.35), rgba(226, 57, 52, 0.13));
@@ -161,6 +193,7 @@ img {
   box-shadow: 0 0 24px rgba(226, 57, 52, 0.22);
 }
 
+/* Kleiner roter Statuspunkt am Einkaufswagen-Icon. */
 .cart-highlight::after {
   content: "";
   position: absolute;
@@ -173,6 +206,7 @@ img {
   box-shadow: 0 0 14px rgba(255, 67, 62, 0.8);
 }
 
+/* Hauptnavigation mit flexibler horizontaler Anordnung. */
 .main-nav {
   display: flex;
   align-items: center;
@@ -181,6 +215,7 @@ img {
   white-space: nowrap;
 }
 
+/* Gestaltung der Navigationslinks. */
 .main-nav a {
   text-decoration: none;
   padding: 12px 16px;
@@ -191,18 +226,26 @@ img {
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
+/* Hover-Zustand der Navigationslinks. */
 .main-nav a:hover {
   background: rgba(255, 255, 255, 0.075);
   transform: translateY(-1px);
 }
 
+/* Aktive Navigationsseite mit rotem Verlauf. */
 .main-nav .nav-active {
   color: white;
   background: linear-gradient(135deg, var(--red), #bf211e);
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 12px 28px rgba(226, 57, 52, 0.32);
 }
-
+.nav-activeP {
+  color:  white;
+  background: linear-gradient(135deg, var(--gold), #d3a65f);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(247, 224, 181, 0.32);
+}
+/* Hamburger-Menü-Button für kleinere Bildschirme. */
 .mobile-menu-btn {
   display: none;
   width: 48px;
@@ -213,6 +256,7 @@ img {
   cursor: pointer;
 }
 
+/* Drei Linien innerhalb des Hamburger-Menüs. */
 .mobile-menu-btn span {
   display: block;
   width: 22px;
@@ -221,12 +265,14 @@ img {
   background: white;
   border-radius: 999px;
 }
+/* Alternative Navigationsklasse aus der Vorlage. */
 .nav {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
+/* Links der alternativen Navigation. */
 .nav a {
   color: rgba(246, 242, 234, 0.76);
   text-decoration: none;
@@ -239,11 +285,13 @@ img {
   transition: 180ms ease;
 }
 
+/* Hover-Effekt der alternativen Navigation. */
 .nav a:hover {
   color: #111;
   background: var(--gold);
 }
 
+/* Großer Hero-Bereich mit Text und Fahrzeug-Slider. */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -255,6 +303,7 @@ img {
   gap: clamp(28px, 5vw, 84px);
 }
 
+/* Dekorativer Hintergrundverlauf des Hero-Bereichs. */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -265,6 +314,7 @@ img {
   pointer-events: none;
 }
 
+/* Dezentes Raster im Hero-Hintergrund. */
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -277,11 +327,13 @@ img {
   mask-image: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent);
 }
 
+/* Textspalte im Hero-Bereich. */
 .hero-copy {
   position: relative;
   z-index: 3;
 }
 
+/* Kleine goldene Abschnittsüberschrift. */
 .eyebrow {
   margin: 0 0 12px;
   color: var(--gold);
@@ -291,6 +343,7 @@ img {
   letter-spacing: 0.16em;
 }
 
+/* Große Hauptüberschrift im Hero-Bereich. */
 .hero-copy h1 {
   margin: 0;
   max-width: 670px;
@@ -299,6 +352,7 @@ img {
   letter-spacing: -0.065em;
 }
 
+/* Beschreibungstext im Hero-Bereich. */
 .hero-copy p:not(.eyebrow) {
   max-width: 560px;
   color: var(--muted);
@@ -306,6 +360,7 @@ img {
   line-height: 1.65;
 }
 
+/* Container für den Fahrzeug-Slider. */
 .slider {
   position: relative;
   z-index: 3;
@@ -315,6 +370,7 @@ img {
   padding: 42px 0 20px;
 }
 
+/* Große Baureihen-Zahl im Hintergrund des Sliders. */
 .year {
   position: absolute;
   z-index: 0;
@@ -329,6 +385,7 @@ img {
   user-select: none;
 }
 
+/* Bildrahmen für das Fahrzeugmotiv mit Schatten und Glas-Effekt. */
 .car-frame {
   position: relative;
   z-index: 2;
@@ -344,6 +401,7 @@ img {
     inset 0 1px 0 rgba(255,255,255,0.12);
 }
 
+/* Weicher Schatten unter dem Fahrzeugbild. */
 .car-frame::after {
   content: "";
   position: absolute;
@@ -357,6 +415,7 @@ img {
   z-index: -1;
 }
 
+/* Fahrzeugbild im Slider. */
 .car-frame img {
   width: 100%;
   aspect-ratio: 2172 / 724;
@@ -364,16 +423,20 @@ img {
   transform: scale(1.01);
 }
 
+/* Aktiviert die Eintrittsanimation des Fahrzeugbildes. */
 .car-frame.is-entering img {
   animation: carIn 780ms cubic-bezier(.16, 1, .3, 1) both;
 }
 
+/* Animation für das Einblenden und leichte Hereinschieben des Fahrzeugs. */
 @keyframes carIn {
+  /* Startzustand einer CSS-Animation. */
   from {
     opacity: 0;
     transform: translateX(42px) scale(1.025);
     filter: blur(8px);
   }
+  /* Endzustand einer CSS-Animation. */
   to {
     opacity: 1;
     transform: translateX(0) scale(1.01);
@@ -381,6 +444,7 @@ img {
   }
 }
 
+/* Textkarte unter dem Fahrzeugbild. */
 .model-panel {
   position: relative;
   z-index: 3;
@@ -394,12 +458,14 @@ img {
   box-shadow: 0 18px 55px rgba(0,0,0,0.42);
 }
 
+/* Standardtext in der Modellkarte. */
 .model-panel p {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
 }
 
+/* Zeitraum-Zeile in der Modellkarte. */
 .model-panel p:first-child {
   color: var(--gold);
   font-size: 13px;
@@ -408,6 +474,7 @@ img {
   letter-spacing: 0.12em;
 }
 
+/* Modellname in der Modellkarte. */
 .model-panel h2 {
   margin: 8px 0 8px;
   font-size: clamp(30px, 3.4vw, 52px);
@@ -415,6 +482,7 @@ img {
   letter-spacing: -0.04em;
 }
 
+/* Steuerleiste unter dem Fahrzeug-Slider. */
 .slider-controls {
   display: flex;
   align-items: center;
@@ -423,6 +491,7 @@ img {
   margin: 24px auto 0;
 }
 
+/* Runde Buttons für vorheriges/nächstes Fahrzeug. */
 .control-btn {
   flex: 0 0 auto;
   width: 52px;
@@ -437,12 +506,14 @@ img {
   transition: 180ms ease;
 }
 
+/* Hover-Effekt für die Slider-Steuerbuttons. */
 .control-btn:hover {
   transform: translateY(-2px);
   background: var(--gold);
   color: #111;
 }
 
+/* Hintergrund der Fortschrittsleiste. */
 .progress {
   height: 5px;
   flex: 1;
@@ -451,6 +522,7 @@ img {
   background: rgba(255,255,255,0.16);
 }
 
+/* Füllbalken der Fortschrittsanzeige. */
 .progress span {
   display: block;
   height: 100%;
@@ -459,27 +531,32 @@ img {
   background: linear-gradient(90deg, var(--gold), #fff2c0);
 }
 
+/* Startet die CSS-Animation des Fortschrittsbalkens. */
 .progress span.run {
   animation: progressRun var(--duration) linear both;
 }
 
+/* Animation, die den Fortschrittsbalken von 0 auf 100 Prozent füllt. */
 @keyframes progressRun {
   from { width: 0; }
   to { width: 100%; }
 }
 
+/* Einheitliche Innenabstände für größere Inhaltsbereiche. */
 .timeline-section,
 .gallery-section,
 .project-section {
   padding: 86px clamp(18px, 5vw, 80px);
 }
 
+/* Zentrierter Überschriftenbereich einer Section. */
 .section-heading {
   max-width: 780px;
   margin: 0 auto 34px;
   text-align: center;
 }
 
+/* Große Abschnittsüberschriften. */
 .section-heading h2,
 .project-card h2 {
   margin: 0;
@@ -488,6 +565,7 @@ img {
   letter-spacing: -0.055em;
 }
 
+/* Beschreibungstexte in Sections und Projektkarten. */
 .section-heading p:not(.eyebrow),
 .project-card p:not(.eyebrow) {
   color: var(--muted);
@@ -495,6 +573,7 @@ img {
   font-size: 16px;
 }
 
+/* Grid für die automatisch erzeugten Timeline-Buttons. */
 .timeline-tabs {
   width: min(1160px, 100%);
   margin: 0 auto;
@@ -503,6 +582,7 @@ img {
   gap: 12px;
 }
 
+/* Einzelner Timeline-Button. */
 .timeline-tab {
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -514,6 +594,7 @@ img {
   transition: 180ms ease;
 }
 
+/* Hover- und Aktivzustand der Timeline-Buttons. */
 .timeline-tab:hover,
 .timeline-tab.is-active {
   background: var(--panel-strong);
@@ -521,6 +602,7 @@ img {
   transform: translateY(-3px);
 }
 
+/* Vorschaubild innerhalb eines Timeline-Buttons. */
 .timeline-tab img {
   height: 70px;
   width: 100%;
@@ -529,11 +611,13 @@ img {
   margin-bottom: 10px;
 }
 
+/* Modellcode innerhalb eines Timeline-Buttons. */
 .timeline-tab strong {
   display: block;
   font-size: 15px;
 }
 
+/* Zeitraum innerhalb eines Timeline-Buttons. */
 .timeline-tab span {
   display: block;
   margin-top: 4px;
@@ -541,6 +625,7 @@ img {
   font-size: 12px;
 }
 
+/* Responsives Grid für die Fahrzeug-Galerie. */
 .gallery-grid {
   width: min(1180px, 100%);
   margin: 0 auto;
@@ -549,6 +634,7 @@ img {
   gap: 18px;
 }
 
+/* Einzelne Galerie-Karte. */
 .gallery-card {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -556,12 +642,14 @@ img {
   background: var(--panel);
 }
 
+/* Bild innerhalb einer Galerie-Karte. */
 .gallery-card img {
   width: 100%;
   aspect-ratio: 2172 / 724;
   object-fit: cover;
 }
 
+/* Titel einer Galerie-Karte. */
 .gallery-card h3 {
   margin: 0;
   padding: 18px 20px 20px;
@@ -569,6 +657,7 @@ img {
   letter-spacing: -0.02em;
 }
 
+/* Projektkarte mit Glas-Hintergrund und Schatten. */
 .project-card {
   width: min(900px, 100%);
   margin: 0 auto;
@@ -581,34 +670,43 @@ img {
   box-shadow: 0 30px 90px rgba(0,0,0,0.35);
 }
 
+/* Responsive Anpassungen für Tablets und kleinere Bildschirme. */
 @media (max-width: 980px) {
+  /* Großer Hero-Bereich mit Text und Fahrzeug-Slider. */
   .hero {
     grid-template-columns: 1fr;
     padding-top: 116px;
   }
 
+  /* Container für den Fahrzeug-Slider. */
   .slider {
     min-height: auto;
   }
 
+  /* Grid für die automatisch erzeugten Timeline-Buttons. */
   .timeline-tabs {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Responsives Grid für die Fahrzeug-Galerie. */
   .gallery-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* Responsive Anpassungen für den Header und das mobile Menü. */
 @media (max-width: 1260px) {
+  /* Sticky Header mit Glas-Effekt, Grid-Layout und hoher Ebene über dem Inhalt. */
   .site-header {
     grid-template-columns: 1fr auto;
   }
 
+  /* Gruppiert Logo und Textmarke im Header. */
   .brand-area {
     grid-column: 1 / 2;
   }
 
+  /* Hamburger-Menü-Button für kleinere Bildschirme. */
   .mobile-menu-btn {
     display: block;
     grid-column: 2/3;
@@ -617,20 +715,24 @@ img {
 
   .action-area,
   .search-area,
+  /* Hauptnavigation mit flexibler horizontaler Anordnung. */
   .main-nav {
     grid-column: 1 / -1;
   }
 
+  /* Hauptnavigation mit flexibler horizontaler Anordnung. */
   .main-nav {
     display: none;
     justify-content: center;
     flex-wrap: wrap;
   }
 
+  /* Gestaltet den Bereich oder Zustand ".main-nav.is-open". */
   .main-nav.is-open {
     display: flex;
   }
 
+  /* Bereich für die Schnellzugriff-Icons im Header. */
   .action-area {
     justify-content: flex-start;
   }
