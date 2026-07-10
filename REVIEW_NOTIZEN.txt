@@ -1,0 +1,43 @@
+Korrektur: Mehrseitiger Shop ohne zerstörte Anfangsstruktur
+
+Was wurde korrigiert:
+- Ausgangsbasis ist wieder die bereinigte Anfangsdatei/Quickfix-Version.
+- Header, Button-Klassen, Suchfeld, action-area und main-nav bleiben wie in der Anfangsstruktur.
+- Keine One-Pager-Abschnitte für Rechtliches, FAQ oder Shop.
+- Eigene Seiten: shop.html, warenkorb.html, checkout.html, bestellung.html, qa.html, rechtliches.html.
+- Warenkorb zeigt jetzt Artikel, Einzelpreis, Menge, Zwischensumme, Versand und Gesamtpreis.
+- Der Warenkorb funktioniert robuster bei lokaler Dateiöffnung, weil der Cart-Zustand zusätzlich per URL weitergegeben wird.
+- localStorage wird weiterhin genutzt, aber Fehler bei file:// werden abgefangen.
+
+Wichtig:
+- Es ist weiterhin ein sicherer Demo-Shop ohne echte Zahlung und ohne Datenbank.
+- Für eine echte Abgabe am besten mit Live Server öffnen, nicht nur per Doppelklick.
+
+Newsletter-Update:
+- Newsletter-Formular zeigt nach erfolgreicher Eingabe eine vollständige professionelle Bestätigungs-Mail.
+- E-Mail enthält Empfänger, Betreff, persönliche Begrüßung, Anmeldedaten, Interessen, Projekt-Hinweis und Signatur.
+- Zusätzlich gibt es einen mailto-Link zum Öffnen im Mailprogramm und einen Button zum Kopieren des Mailtexts.
+- Hinweis: Ohne Backend wird keine echte E-Mail automatisch versendet; die Funktion ist als saubere statische Schulprojekt-Lösung umgesetzt.
+
+
+Update: Professionelle Inhaltsergänzung
+- Startseite mit Einordnung, Projektziel und Seitenüberblick ergänzt.
+- Modell- und Geschichtsseiten mit erklärenden Texten, historischen Wendepunkten und Fazit ergänzt.
+- Technikseite mit verständlicherer Erklärung und offiziellen Orientierungswerten ergänzt.
+- Projektseite mit Zielen, Qualitätsanspruch, Quellenhinweis und erweitertem Seitenüberblick ergänzt.
+- Newsletter-Seite mit konkreter Erklärung der Newsletter-Inhalte ergänzt.
+- Shop, Warenkorb, Checkout und Bestellbestätigung mit professionellen Demo-Hinweisen ergänzt.
+- FAQ und Rechtliches deutlich vollständiger formuliert.
+- Navigationsstruktur und Header-Aufbau wurden nicht umgebaut.
+
+Update: Modelle- und Geschichte-Bereich repariert
+
+- modelle.html: Inhaltlich von historischen Generationen getrennt und als 911-Modellvarianten-Seite aufgebaut.
+- modelle.html: Semantische Verschachtelung korrigiert; zusätzliche Info-Bereiche liegen nicht mehr im Hero-Grid.
+- modelle/script.js: Slider-Daten auf Carrera, Cabriolet, GTS, Targa, Turbo, Turbo Cabriolet, GT3 und GT3 RS umgestellt.
+- geschichte.html: Inhaltlich als echte Geschichtsseite aufgebaut, inklusive vollständiger Übersicht der acht 911-Hauptgenerationen.
+- geschichte.html: Semantische Verschachtelung korrigiert; Geschichte und Modelle sind nun klar getrennt.
+- CSS: Vergleichstabellen und responsive Darstellung ergänzt, ohne Header oder Navigation umzubauen.
+- Prüfung: JavaScript-Syntax geprüft, interne Pfade geprüft, doppelte IDs geprüft.
+
+Hinweis: Die Website bleibt ein inoffizielles Schulprojekt. Automatische visuelle Browserprüfung war in dieser Umgebung nicht möglich.

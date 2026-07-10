@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: shop.html
+  Zweck: Shop-Seite mit Demo-Produkten, Suche, Filter und Warenkorb-Anbindung.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de">
+<!-- Kopfbereich: Meta-Daten, Seitentitel und CSS-Dateien. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | Porsche Experience</title>
+  <link rel="stylesheet" href="shop/style.css" />
+  <link rel="stylesheet" href="global/translate-interactive.css" />
+</head>
+<body>
+
+  <!-- Sichtbarer Seiteninhalt beginnt hier. -->
+<!-- Header: Logo, Schnellzugriff, Suche und Hauptnavigation. -->
+
+<header class="site-header">
+    <!-- Markenbereich: Logo und Name des Schulprojekts. -->
+
+    <div class="brand-area">
+      <img src="main web/images/porsche.png" alt="Logo Porsche Experience" class="brand-logo" />
+      <div class="brand-copy">
+        <span>Schulprojekt</span>
+        <h1>Porsche Experience</h1>
+      </div>
+    </div>
+
+    <!-- Mobiler Menü-Button: öffnet/schließt die Navigation auf kleinen Bildschirmen. -->
+
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigationscontainer: enthält Schnellzugriffe, Suche und Menülinks. -->
+
+
+    <div class="nav-menu" id="mainNav">
+      <!-- Schnellzugriff: Icons für E-Mail, Rechtliches, FAQ und Warenkorb. -->
+
+      <div class="action-area" aria-label="Schnellzugriff">
+        <a href="mailto:info@example.de" class="icon-link" aria-label="E-Mail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"/></svg>
+        </a>
+
+        <a href="rechtliches.html" class="icon-link" aria-label="Paragraf und Rechtliches">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="18.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700">&#167;</text></svg>
+        </a>
+
+        <a href="qa.html" class="icon-link" aria-label="Fragen und Antworten">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-2.9.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"/></svg>
+        </a>
+
+        <a href="warenkorb.html" class="icon-link cart-highlight" aria-label="Einkaufswagen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"/></svg>
+        </a>
+      </div>
+
+      <!-- Suche: durchsucht die wichtigsten Projektseiten und Inhalte. -->
+
+
+      <form class="search-area" role="search" id="siteSearchForm">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"/></svg>
+        <input type="search" id="siteSearchInput" placeholder="Suchen..." aria-label="Suche" autocomplete="off" />
+
+        <div class="search-results" id="siteSearchResults" role="listbox" aria-label="Suchergebnisse"></div>
+      </form>
+
+      <!-- Hauptnavigation: Links zu den wichtigsten Unterseiten. -->
+
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+         <a href="index.html">Home</a>
+        <a href="geschichte.html" >Geschichte</a>
+        <a href="modelle.html" >Modelle</a>
+        <a href="Technik.html" >Technik</a>
+        <a href="Newsletter.html" >Newsletter</a>
+        <a href="Projekt.html" >Projekt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hauptbereich: eigentlicher Inhalt dieser Seite. -->
+
+
+  <main>
+    <!-- Hero-Bereich: starke Einführung mit Titel, Text und visueller Wirkung. -->
+
+    <!-- Shop-Bereich: Demo-Produkte, Warenkorb und Projekt-Shop-Funktionen. -->
+
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+
+    <section class="shop-hero">
+      <div>
+        <p class="kicker">Shop</p>
+        <h2>Projekt-Shop</h2>
+        <p>
+          Der Shop ist eine professionelle Frontend-Demo: Produkte ansehen, filtern,
+          in den Warenkorb legen, Mengen anpassen und den Checkout durchlaufen.
+          Es handelt sich nicht um einen echten Verkauf, sondern um eine realistische
+          Umsetzung für das Schulprojekt.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="warenkorb.html" data-cart-link>Zum Warenkorb</a>
+          <a class="secondary-btn" href="qa.html">Fragen zum Shop</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <span class="label">Warenkorb</span>
+        <strong data-cart-count>0</strong>
+        <p>Artikel gespeichert</p>
+      </aside>
+    </section>
+
+    <!-- Shop-Bereich: Demo-Produkte, Warenkorb und Projekt-Shop-Funktionen. -->
+
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+
+    <section class="shop-tools" aria-label="Shop-Filter">
+      <div>
+        <label for="productSearch">Produkte suchen</label>
+        <input id="productSearch" type="search" placeholder="z. B. Poster, Technik, Modell ..." />
+      </div>
+
+      <div class="filter-group" aria-label="Kategorie auswählen">
+        <button class="filter-btn is-active" type="button" data-filter="alle">Alle</button>
+        <button class="filter-btn" type="button" data-filter="poster">Poster</button>
+        <button class="filter-btn" type="button" data-filter="karten">Karten</button>
+        <button class="filter-btn" type="button" data-filter="digital">Digital</button>
+      </div>
+    </section>
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+    <section class="product-section" aria-labelledby="product-title">
+      <div class="section-heading">
+        <p class="kicker">Produkte</p>
+        <h2 id="product-title">Artikelübersicht</h2>
+        <p>Alle Preise sind fiktiv und nur für die technische Shop-Demo gedacht.</p>
+      </div>
+
+      <!-- Produktliste: wird durch JavaScript mit Demo-Produkten gefüllt. -->
+
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <div class="toast" id="shopToast" aria-live="polite"></div>
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+    <section class="info-section" id="shop-erklaerung">
+      <div class="section-heading">
+        <p class="eyebrow">Shop-Funktion</p>
+        <h2>So funktioniert die Demo</h2>
+        <p>
+          Der Shop zeigt typische Abläufe eines Online-Shops, bleibt aber vollständig
+          lokal im Browser. Dadurch ist er sicher für ein Schulprojekt und trotzdem
+          technisch nachvollziehbar.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <article>
+          <h3>Produkt wählen</h3>
+          <p>Über Suche und Kategorien findest du passende Projektartikel.</p>
+        </article>
+        <article>
+          <h3>Warenkorb</h3>
+          <p>Artikel, Mengen, Einzelpreise und Gesamtbeträge werden berechnet.</p>
+        </article>
+        <article>
+          <h3>Checkout</h3>
+          <p>Das Formular prüft Pflichtfelder und erstellt eine Demo-Bestellung.</p>
+        </article>
+        <article>
+          <h3>Bestätigung</h3>
+          <p>Am Ende erscheint eine Übersicht, ohne dass echte Daten versendet werden.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer: Abschluss der Seite mit Projekt-, Kontakt- oder Zusatzinformationen. -->
+
+
+
+  <footer>
+    <p>© 2026 Porsche Experience Schulprojekt · Inoffizielle Demo-Website</p>
+  </footer>
+
+  <!-- Seitenspezifisches JavaScript für diese Unterseite. -->
+
+
+  <script src="shop/script.js"></script>
+  <!-- Globale Übersetzung und Zusatzinteraktivität. -->
+
+  <script src="global/translate-interactive.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+Porsche Experience – Navigation & Code-Kommentare
+
+Was wurde in dieser Version gemacht?
+1. Die Navigationsleiste wurde wieder näher an den ersten Stand gesetzt.
+   - Die spätere globale Glow-Überschreibung wurde entfernt.
+   - Die automatische JavaScript-Manipulation der nav-active-Klassen wurde entfernt.
+   - Die aktive Seite wird wieder über die feste Klasse nav-active im HTML markiert, wie in der ersten ZIP.
+
+2. Die Kommentare im Code wurden sauber ergänzt.
+   - HTML-Kommentare erklären Seitenbereiche.
+   - CSS-Kommentare erklären Layout, Navigation, Farben, Effekte und Responsiveness.
+   - JavaScript-Kommentare erklären Suche, Slider, Formulare, Warenkorb, Q&A und Übersetzung.
+
+3. Die neuen Funktionen bleiben erhalten.
+   - Interaktives Q&A
+   - DE/EN-Sprachumschalter
+   - Shop/Warenkorb
+   - Newsletter-Funktion
+   - Start-Hinweis für Chrome/Live Server
+
+Wichtig:
+Bitte die ZIP entpacken und die Website am besten mit VS Code Live Server starten.
+Nicht direkt aus der ZIP im Browser öffnen.

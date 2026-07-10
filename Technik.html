@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: Technik.html
+  Zweck: Technik-Seite mit Erklärungen zu Motor, Fahrwerk, Aerodynamik und Bedienung.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de">
+<!-- Kopfbereich: Meta-Daten, Seitentitel und CSS-Dateien. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technik | Porsche Experience</title>
+  <link rel="stylesheet" href="Technik/style.css" />
+  <link rel="stylesheet" href="global/translate-interactive.css" />
+</head>
+<body>
+
+  <!-- Sichtbarer Seiteninhalt beginnt hier. -->
+
+  <!-- Header: Logo, Schnellzugriff, Suche und Hauptnavigation. -->
+
+
+  <header class="site-header">
+    <!-- Markenbereich: Logo und Name des Schulprojekts. -->
+
+    <div class="brand-area">
+      <img src="Technik/porsche.png" alt="Logo Porsche Experience" class="brand-logo" />
+      <div class="brand-copy">
+        <span>Schulprojekt</span>
+        <h1>Porsche Experience</h1>
+      </div>
+    </div>
+
+    <!-- Mobiler Menü-Button: öffnet/schließt die Navigation auf kleinen Bildschirmen. -->
+
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigationscontainer: enthält Schnellzugriffe, Suche und Menülinks. -->
+
+
+    <div class="nav-menu" id="mainNav">
+      <!-- Schnellzugriff: Icons für E-Mail, Rechtliches, FAQ und Warenkorb. -->
+
+      <div class="action-area" aria-label="Schnellzugriff">
+        <a href="mailto:info@example.de" class="icon-link" aria-label="E-Mail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"/></svg>
+        </a>
+        <a href="rechtliches.html" class="icon-link" aria-label="Paragraf und Rechtliches">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="18.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700">&#167;</text></svg>
+        </a>
+        <a href="qa.html" class="icon-link" aria-label="Fragen und Antworten">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-2.9.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"/></svg>
+        </a>
+        <a href="warenkorb.html" class="icon-link cart-highlight" aria-label="Einkaufswagen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"/></svg>
+        </a>
+      </div>
+
+      <!-- Suche: durchsucht die wichtigsten Projektseiten und Inhalte. -->
+
+
+      <form class="search-area" role="search" id="siteSearchForm">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"/></svg>
+        <input type="search" id="siteSearchInput" placeholder="Suchen..." aria-label="Suche" autocomplete="off" />
+
+        <div class="search-results" id="siteSearchResults" role="listbox" aria-label="Suchergebnisse"></div>
+      </form>
+
+      <!-- Hauptnavigation: Links zu den wichtigsten Unterseiten. -->
+
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="geschichte.html">Geschichte</a>
+        <a href="modelle.html">Modelle</a>
+        <a href="Technik.html" class="nav-active">Technik</a>
+        <a href="Newsletter.html">Newsletter</a>
+        <a href="Projekt.html">Projekt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hauptbereich: eigentlicher Inhalt dieser Seite. -->
+
+
+  <main>
+    <!-- Hero-Bereich: starke Einführung mit Titel, Text und visueller Wirkung. -->
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+    <section class="hero" id="technik-intro" style="min-height:auto; padding-top:132px; padding-bottom:20px; grid-template-columns:1fr;">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-copy" style="max-width:900px; margin:0 auto; text-align:center;">
+        <p class="eyebrow">Ingenieurskunst</p>
+        <h1 style="max-width:100%;">Die Technik hinter dem Mythos</h1>
+        <p style="margin:18px auto 0; max-width:760px;">
+          Der Porsche 911 steht seit Jahrzehnten für eine ganz eigene Philosophie: der
+          Motor sitzt hinten, angetrieben werden die Hinterräder (oder alle vier), und
+          jede Generation verfeinert dieses Grundkonzept mit neuer Technik, ohne die
+          ursprüngliche Idee zu verraten. Diese Seite zeigt die wichtigsten technischen
+          Bausteine, die den 911 zu dem machen, was er ist.
+        </p>
+      </div>
+    </section>
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+    <section class="timeline-section" id="technik-bereiche">
+      <div class="section-heading">
+        <h2 class="eyebrow">Technikbereiche</h2>
+        <p>Vier Bereiche, die zusammen das Fahrerlebnis eines 911 ausmachen.</p>
+      </div>
+
+      <div class="tech-tabs" id="techTabs">
+        <button class="tech-tab is-active" data-panel="motor" type="button">Motor &amp; Antrieb</button>
+        <button class="tech-tab" data-panel="fahrwerk" type="button">Fahrwerk &amp; Bremsen</button>
+        <button class="tech-tab" data-panel="aero" type="button">Aerodynamik</button>
+        <button class="tech-tab" data-panel="interieur" type="button">Interieur &amp; Assistenz</button>
+      </div>
+
+      <div class="tech-panels">
+        <article class="tech-panel is-active" data-panel="motor">
+          <div class="tech-panel-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M7 7l2.5 2.5M14.5 14.5 17 17M17 7l-2.5 2.5M9.5 14.5 7 17"/></svg>
+          </div>
+          <div>
+            <h3>Boxermotor im Heck</h3>
+            <p>
+              Kennzeichnend für den 911 ist der Boxermotor, der hinter der Hinterachse
+              sitzt. Die gegenüberliegend angeordneten Zylinder sorgen für einen
+              niedrigen Schwerpunkt und einen unverwechselbaren Klang.
+            </p>
+            <ul>
+              <li><strong>Bauart:</strong> Sechszylinder-Boxer, meist mit Turboaufladung</li>
+              <li><strong>Getriebe:</strong> Doppelkupplungsgetriebe (PDK) oder Handschaltung</li>
+              <li><strong>Antrieb:</strong> Heckantrieb (Carrera) oder Allradantrieb (Carrera 4)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tech-panel" data-panel="fahrwerk">
+          <div class="tech-panel-icon">
+            <svg viewBox="0 0 24 24"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M4 12h16M6 12 8 5h8l2 7"/></svg>
+          </div>
+          <div>
+            <h3>Fahrwerk &amp; Bremsen</h3>
+            <p>
+              Adaptive Dämpfersysteme passen die Fahrwerksabstimmung in Echtzeit an
+              Fahrbahn und Fahrstil an. Große, innenbelüftete Bremsscheiben sorgen für
+              verlässliche Verzögerung auch bei hohem Tempo.
+            </p>
+            <ul>
+              <li><strong>PASM:</strong> adaptive Dämpferregelung, wählbar zwischen Komfort und Sport</li>
+              <li><strong>Hinterachslenkung:</strong> mehr Agilität in der Stadt, mehr Stabilität bei Tempo</li>
+              <li><strong>Bremsen:</strong> optional keramische Hochleistungsbremsanlage (PCCB)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tech-panel" data-panel="aero">
+          <div class="tech-panel-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 12c4-6 14-6 18 0-4 6-14 6-18 0Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+          </div>
+          <div>
+            <h3>Aerodynamik</h3>
+            <p>
+              Ein ausfahrbarer Heckspoiler erzeugt bei hohem Tempo zusätzlichen
+              Anpressdruck, während er im Alltag flach anliegt und den
+              Luftwiderstand gering hält. Aktive Kühlluftklappen regeln zudem, wie
+              viel Luft für die Kühlung benötigt wird.
+            </p>
+            <ul>
+              <li><strong>Heckspoiler:</strong> geschwindigkeitsabhängig ausfahrbar</li>
+              <li><strong>Luftklappen:</strong> aktiv geregelt für Kühlung und Effizienz</li>
+              <li><strong>Unterboden:</strong> weitgehend verkleidet für einen sauberen Luftstrom</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tech-panel" data-panel="interieur">
+          <div class="tech-panel-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M3 17v2h18v-2M8 9h3M8 12h5"/></svg>
+          </div>
+          <div>
+            <h3>Interieur &amp; Assistenzsysteme</h3>
+            <p>
+              Ein digitales Kombiinstrument, ein zentrales Touch-Display und eine
+              wachsende Zahl an Assistenzsystemen verbinden klassisches Fahrgefühl
+              mit moderner Alltagstauglichkeit.
+            </p>
+            <ul>
+              <li><strong>Sport Chrono Paket:</strong> zusätzliche Fahrmodi und Rundenzeitmessung</li>
+              <li><strong>Fahrassistenten:</strong> Abstandsregeltempostat, Spurhalte- und Notbremsassistent</li>
+              <li><strong>Cockpit:</strong> digitale Anzeigen kombiniert mit klassisch mittigem Drehzahlmesser</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+    <section class="spec-section" id="technische-daten">
+      <div class="section-heading">
+        <h2 class="eyebrow">Technische Daten</h2>
+        <p>
+          Beispielhafte offizielle Orientierungswerte aktueller 911-Carrera-Modelle.
+          Die Werte dienen im Schulprojekt zur Einordnung und können je nach Markt,
+          Ausstattung und Modelljahr abweichen.
+        </p>
+      </div>
+
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <tbody>
+            <tr>
+              <th>911 Carrera</th>
+              <td>290 kW / 394 PS, 0–100 km/h in ca. 3,9 s mit Sport Chrono, ca. 294 km/h Höchstgeschwindigkeit</td>
+            </tr>
+            <tr>
+              <th>911 Carrera S</th>
+              <td>353 kW / 480 PS, 0–100 km/h in ca. 3,3 s mit Sport Chrono, ca. 308 km/h Höchstgeschwindigkeit</td>
+            </tr>
+            <tr>
+              <th>Motorprinzip</th>
+              <td>Sechszylinder-Boxermotor im Heckbereich, je nach Modell mit Turboaufladung oder besonderer Sportauslegung</td>
+            </tr>
+            <tr>
+              <th>Getriebe</th>
+              <td>PDK-Doppelkupplungsgetriebe oder modellabhängig Handschaltung</td>
+            </tr>
+            <tr>
+              <th>Antrieb</th>
+              <td>Heckantrieb oder Allradantrieb je nach Modellvariante</td>
+            </tr>
+            <tr>
+              <th>Hinweis</th>
+              <td>Keine Kaufberatung, sondern eine technische Erklärung für ein inoffizielles Schulprojekt.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Galerie-Bereich: visuelle Beispiele und Bildmaterial zum Thema. -->
+
+
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+
+
+    <section class="gallery-section" id="technik-projekt">
+      <div class="section-heading">
+        <h2 class="eyebrow">Unser Schulprojekt</h2>
+      </div>
+    </section>
+    <!-- Abschnitt: eigener thematischer Bereich innerhalb der Seite. -->
+
+    <section class="info-section" id="technik-verstaendlich">
+      <div class="section-heading">
+        <p class="eyebrow">Einfach erklärt</p>
+        <h2>Warum diese Technik zusammenarbeitet</h2>
+        <p>
+          Ein Sportwagen besteht nicht nur aus Motorleistung. Entscheidend ist, wie
+          Motor, Getriebe, Fahrwerk, Bremsen und Aerodynamik zusammenspielen.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <article>
+          <h3>Leistung</h3>
+          <p>Der Motor liefert Kraft und Beschleunigung. Beim 911 ist der Boxermotor ein wichtiges Erkennungsmerkmal.</p>
+        </article>
+        <article>
+          <h3>Übertragung</h3>
+          <p>Getriebe und Antrieb bringen die Leistung kontrolliert auf die Straße.</p>
+        </article>
+        <article>
+          <h3>Kontrolle</h3>
+          <p>Fahrwerk, Bremsen und Assistenzsysteme helfen, das Auto präzise und sicher zu bewegen.</p>
+        </article>
+        <article>
+          <h3>Stabilität</h3>
+          <p>Aerodynamik und Karosserieform unterstützen Fahrverhalten, Kühlung und hohe Geschwindigkeiten.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Seitenspezifisches JavaScript für diese Unterseite. -->
+
+
+  <script src="Technik/script.js"></script>
+  <!-- Globale Übersetzung und Zusatzinteraktivität. -->
+
+  <script src="global/translate-interactive.js"></script>
+</body>
+</html>

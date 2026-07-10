@@ -1,0 +1,14 @@
+Navigation wirklich auf Anfangslook zurückgesetzt
+
+Was geändert wurde:
+- Neuer letzter Stylesheet: global/navigation-original.css
+- Der Original-Glow-Block wurde direkt aus der ersten ZIP übernommen.
+- Frühere globale Navigation-Overrides aus translate-interactive.css wurden entfernt.
+- Alle HTML-Dateien laden navigation-original.css zuletzt.
+- Header-/Navigationsaufbau bleibt wie in der ursprünglichen Struktur.
+- Q&A, Shop, Übersetzung und neue Seiten bleiben erhalten.
+
+Warum:
+Der vorherige Fix hatte mehrere CSS-Regeln übereinandergelegt.
+Dadurch konnten sich Effekte gegenseitig überschreiben.
+Diese Version lädt den Originaleffekt zuletzt und verhindert Konflikte.

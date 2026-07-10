@@ -1,0 +1,18 @@
+Porsche Experience – Übersetzung & Interaktivität
+
+Geändert:
+- Eigener DE/EN-Sprachumschalter auf allen HTML-Seiten eingebaut.
+- Übersetzung funktioniert lokal über JavaScript und ist nicht vom Browser-Übersetzer abhängig.
+- Sprache wird mit localStorage gespeichert und zusätzlich über ?lang=de/en in internen Links weitergegeben, damit es auch lokal per Doppelklick zuverlässiger funktioniert.
+- Dynamisch erzeugte Inhalte wie Slider, Shop-Produkte, Warenkorb und Newsletter-Bestätigung werden über MutationObserver nachübersetzt.
+- Zusätzliche Interaktivität ergänzt:
+  - Lesefortschrittsbalken oben
+  - Scroll-zurück-nach-oben-Button
+  - interaktive Karten mit Fokus-/Klickzustand
+  - FAQ-Details verhalten sich wie ein sauberes Accordion
+  - dezente Scroll-Reveal-Animationen
+
+Wichtig:
+- Es wird keine externe Übersetzungs-API verwendet.
+- Die Navigation und ursprüngliche Seitenstruktur wurden nicht umgebaut.
+- Der Sprachumschalter liegt als fixes Widget unten rechts, damit Header und Menü nicht überladen werden.

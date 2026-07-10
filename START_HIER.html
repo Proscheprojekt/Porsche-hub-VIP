@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: START_HIER.html
+  Zweck: Start-Hinweisseite mit Erklärung, wie die Website lokal geöffnet werden soll.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de">
+<!-- Kopfbereich: Meta-Daten, Seitentitel und CSS-Dateien. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start-Hinweis | Porsche Experience</title>
+  <style>
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#050505;color:#f2e8d5;font-family:Arial,sans-serif}
+    main{max-width:760px;padding:42px;border:1px solid rgba(200,164,93,.45);border-radius:24px;background:#121212;box-shadow:0 20px 70px rgba(0,0,0,.5)}
+    h1{margin-top:0;color:#c8a45d}
+    p,li{line-height:1.6}
+    a{display:inline-block;margin-top:18px;padding:14px 22px;border-radius:999px;background:#c8a45d;color:#050505;text-decoration:none;font-weight:800}
+    code{background:#1d1d1d;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+
+  <!-- Sichtbarer Seiteninhalt beginnt hier. -->
+<!-- Hauptbereich: eigentlicher Inhalt dieser Seite. -->
+
+<main>
+  <h1>Chrome-Start-Hinweis</h1>
+  <p>Bitte öffne die Website nicht direkt aus der ZIP-Datei. Entpacke zuerst den ganzen Ordner, sonst können Chrome und andere Browser CSS-/JS-Dateien nicht sicher laden.</p>
+  <ol>
+    <li>ZIP entpacken.</li>
+    <li>Ordner in VS Code öffnen.</li>
+    <li><code>index.html</code> mit Live Server starten.</li>
+    <li>Unten rechts DE/EN testen.</li>
+  </ol>
+  <p>Die Übersetzung wurde Chrome-sicher repariert und nutzt jetzt einen Fallback, falls <code>localStorage</code> blockiert ist.</p>
+  <a href="index.html">Website starten</a>
+</main>
+</body>
+</html>

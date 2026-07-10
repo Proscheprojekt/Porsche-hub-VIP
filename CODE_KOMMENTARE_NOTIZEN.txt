@@ -1,0 +1,12 @@
+# CODE_KOMMENTARE_NOTIZEN
+
+Diese Version enthält erklärende Kommentare in den wichtigsten Code-Dateien der Website.
+
+Kommentiert wurden:
+- HTML-Dateien: Aufbau, Header, Navigation, Hauptbereiche, Footer und Script-Einbindungen
+- CSS-Dateien: Design-Variablen, Layoutbereiche, Karten, Galerie, Shop, Warenkorb und responsive Anpassungen
+- JavaScript-Dateien: Datenstrukturen, Funktionen, Events, Slider, Suche, Shop, Warenkorb, Newsletter und Übersetzung
+
+Wichtig:
+Die Kommentare sind für Verständnis, Präsentation und Abgabe gedacht.
+Sie sollen erklären, was der Code macht, ohne die sichtbare Website zu verändern.
