@@ -1,0 +1,189 @@
+/* =============================================================
+   CODE-KOMMENTARE: translate-interactive.css
+   Zweck: Stylesheet für Layout, Farben, Abstände, Responsiveness und visuelle Wirkung.
+   Die Kommentare erklären die CSS-Bereiche. Sie ändern das Design nicht.
+============================================================= */
+
+
+/* Globale Design-Variablen: Farben, Schatten, Rundungen und Grundwerte. */
+:root {
+  --pe-gold: #c8a45d;
+  --pe-dark: rgba(5, 5, 5, 0.84);
+  --pe-panel: rgba(18, 18, 18, 0.92);
+  --pe-border: rgba(200, 164, 93, 0.38);
+  --pe-text: #f2e8d5;
+}
+
+.pe-read-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--pe-gold), #8c1d18);
+  z-index: 9999;
+  box-shadow: 0 0 18px rgba(200, 164, 93, 0.45);
+  pointer-events: none;
+}
+
+.language-widget {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--pe-border);
+  border-radius: 999px;
+  background: var(--pe-dark);
+  color: var(--pe-text);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.language-widget__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(242, 232, 213, 0.72);
+}
+
+.language-widget__buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.language-widget button {
+  min-width: 42px;
+  min-height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--pe-text);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.language-widget button:hover,
+.language-widget button:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--pe-gold);
+  outline: none;
+}
+
+.language-widget button.is-active {
+  background: var(--pe-gold);
+  color: #080808;
+  border-color: var(--pe-gold);
+}
+
+.pe-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 84px;
+  transform: translate(-50%, 12px);
+  z-index: 9999;
+  max-width: min(92vw, 420px);
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--pe-border);
+  background: var(--pe-panel);
+  color: var(--pe-text);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.36);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.pe-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.pe-back-top {
+  position: fixed;
+  right: 22px;
+  bottom: 82px;
+  z-index: 9997;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--pe-border);
+  border-radius: 50%;
+  background: var(--pe-panel);
+  color: var(--pe-text);
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pe-back-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pe-back-top:hover,
+.pe-back-top:focus-visible {
+  border-color: var(--pe-gold);
+  outline: none;
+}
+
+.pe-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.48s ease, transform 0.48s ease;
+}
+
+.pe-reveal.pe-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pe-card-active {
+  border-color: var(--pe-gold) !important;
+  box-shadow: 0 18px 44px rgba(200, 164, 93, 0.18) !important;
+  transform: translateY(-3px);
+}
+
+details {
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+details[open] {
+  border-color: var(--pe-gold) !important;
+  background: rgba(200, 164, 93, 0.08) !important;
+}
+
+/* Responsive Design: Anpassungen für kleinere Bildschirme. */
+@media (max-width: 720px) {
+  .language-widget {
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 9px;
+    gap: 7px;
+  }
+
+  .language-widget__label {
+    display: none;
+  }
+
+  .language-widget button {
+    min-width: 39px;
+    min-height: 32px;
+    font-size: 0.78rem;
+  }
+
+  .pe-back-top {
+    right: 14px;
+    bottom: 66px;
+  }
+}
