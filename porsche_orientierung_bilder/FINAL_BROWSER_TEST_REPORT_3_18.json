@@ -1,0 +1,427 @@
+{
+  "generated_at": "2026-07-12 18:00:08",
+  "pages": {
+    "index.html": {
+      "desktop": {
+        "title": "Porsche Experience | Interaktives Schulprojekt",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 5654,
+        "imageCount": 8,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Porsche Experience | Interaktives Schulprojekt",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 8513,
+        "imageCount": 8,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    },
+    "geschichte.html": {
+      "desktop": {
+        "title": "Porsche 911 Geschichte | Porsche Experience",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 9905,
+        "imageCount": 26,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Porsche 911 Geschichte | Porsche Experience",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 16507,
+        "imageCount": 26,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    },
+    "modelle.html": {
+      "desktop": {
+        "title": "Porsche 911 Modelle | Porsche Experience",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 9016,
+        "imageCount": 28,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Porsche 911 Modelle | Porsche Experience",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 14992,
+        "imageCount": 28,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    },
+    "Technik.html": {
+      "desktop": {
+        "title": "Porsche 911 Technik | Porsche Experience",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 6686,
+        "imageCount": 3,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Porsche 911 Technik | Porsche Experience",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 11510,
+        "imageCount": 3,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    },
+    "Newsletter.html": {
+      "desktop": {
+        "title": "Newsletter-Demo | Porsche Experience",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 6172,
+        "imageCount": 11,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Newsletter-Demo | Porsche Experience",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 9598,
+        "imageCount": 11,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    },
+    "Projekt.html": {
+      "desktop": {
+        "title": "Projekt & Dokumentation | Porsche Experience",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 8634,
+        "imageCount": 4,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Projekt & Dokumentation | Porsche Experience",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 15481,
+        "imageCount": 4,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    },
+    "qa.html": {
+      "desktop": {
+        "title": "Interaktive Fragen & Antworten | Porsche Experience",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 5515,
+        "imageCount": 2,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      },
+      "mobile": {
+        "title": "Interaktive Fragen & Antworten | Porsche Experience",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 11477,
+        "imageCount": 2,
+        "failedImages": [],
+        "h1Count": 1,
+        "duplicateIds": [],
+        "mainVisible": true,
+        "horizontalOverflow": false,
+        "errors": []
+      }
+    }
+  },
+  "interactions": {
+    "desktop_header": {
+      "labels": [
+        "Einkaufswagen",
+        "E-Mail",
+        "Paragraf und Rechtliches",
+        "Fragen und Antworten"
+      ],
+      "stableAfterHover": true,
+      "boxesBefore": [
+        [
+          885,
+          49,
+          48,
+          48
+        ],
+        [
+          943,
+          49,
+          48,
+          48
+        ],
+        [
+          1001,
+          49,
+          48,
+          48
+        ],
+        [
+          1059,
+          49,
+          48,
+          48
+        ]
+      ],
+      "boxesAfter": [
+        [
+          885,
+          49,
+          48,
+          48
+        ],
+        [
+          943,
+          49,
+          48,
+          48
+        ],
+        [
+          1001,
+          49,
+          48,
+          48
+        ],
+        [
+          1059,
+          49,
+          48,
+          48
+        ]
+      ],
+      "styles": [
+        {
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)"
+        },
+        {
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)"
+        },
+        {
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)"
+        },
+        {
+          "color": "rgb(255, 255, 255)",
+          "fill": "rgb(255, 255, 255)"
+        }
+      ],
+      "errors": []
+    },
+    "model_comparison": {
+      "initial": {
+        "a": "0",
+        "b": "7",
+        "nA": "911 Carrera Coupé",
+        "nB": "911 GT3 RS",
+        "sA": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%237d7108%22/%3E%3C/svg%3E",
+        "sB": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%23a0cede%22/%3E%3C/svg%3E",
+        "altA": "Porsche 911 Carrera Coupé in seitlicher Ansicht",
+        "altB": "Porsche 911 GT3 RS in dynamischer Seitenansicht",
+        "cA": 4,
+        "cB": 4
+      },
+      "after": {
+        "a": "7",
+        "b": "0",
+        "nA": "911 GT3 RS",
+        "nB": "911 Carrera Coupé",
+        "sA": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%23a0cede%22/%3E%3C/svg%3E",
+        "sB": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%237d7108%22/%3E%3C/svg%3E",
+        "altA": "Porsche 911 GT3 RS in dynamischer Seitenansicht",
+        "altB": "Porsche 911 Carrera Coupé in seitlicher Ansicht",
+        "cA": 4,
+        "cB": 4
+      },
+      "imageChangedA": true,
+      "imageChangedB": true,
+      "populated": true,
+      "errors": []
+    },
+    "tech_tabs": {
+      "states": [
+        {
+          "sel": [
+            "motor"
+          ],
+          "vis": [
+            "motor"
+          ],
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%23fa5910%22/%3E%3C/svg%3E",
+          "alt": "Technische Illustration zum Boxermotor und Antrieb des Porsche 911"
+        },
+        {
+          "sel": [
+            "fahrwerk"
+          ],
+          "vis": [
+            "fahrwerk"
+          ],
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%238528f7%22/%3E%3C/svg%3E",
+          "alt": "Detaildarstellung von Fahrwerk, Rad und Bremsanlage eines Porsche 911"
+        },
+        {
+          "sel": [
+            "aero"
+          ],
+          "vis": [
+            "aero"
+          ],
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%23509378%22/%3E%3C/svg%3E",
+          "alt": "Aerodynamische Luftführung am breiten Heck eines Porsche 911"
+        },
+        {
+          "sel": [
+            "interieur"
+          ],
+          "vis": [
+            "interieur"
+          ],
+          "src": "data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22675%22%3E%3Crect width=%221200%22 height=%22675%22 fill=%22%23d80c38%22/%3E%3C/svg%3E",
+          "alt": "Dunkles digitales Cockpit als Darstellung von Interieur und Assistenzsystemen"
+        }
+      ],
+      "uniqueImages": 4,
+      "synchronized": true,
+      "errors": []
+    },
+    "qa": {
+      "questionCount": 33,
+      "custom": {
+        "title": "Warum habt ihr Porsche als Thema gewählt?",
+        "text": "Porsche wurde gewählt, weil die Marke Technik, Emotion, Design, Geschichte und Premium-Wirkung verbindet. Genau diese Mischung passt gut zu einem KT-Projekt, weil man daran Webdesign, Nutzerführung, Interaktivität und technische Umsetzung anschaulich zeigen kann.",
+        "category": "Kategorie: Projekt"
+      },
+      "prepared": {
+        "title": "Was ist das Ziel eures Projekts?",
+        "text": "Das Ziel des Projekts ist eine moderne Porsche-Experience-Website als Schulprojekt. Die Website soll nicht nur Informationen zeigen, sondern ein digitales Erlebnis schaffen: Geschichte, Modelle, Technik, Newsletter, Shop-Demo und Präsentationsinhalte werden zu einer zusammenhängenden Marken-Experience verbunden."
+      },
+      "worked": true,
+      "errors": []
+    },
+    "mobile_navigation": {
+      "expanded": "true",
+      "classes": "nav-menu is-open",
+      "actions": [
+        {
+          "label": "Einkaufswagen",
+          "x": 251,
+          "y": 146,
+          "visible": true,
+          "order": "4"
+        },
+        {
+          "label": "E-Mail",
+          "x": 95,
+          "y": 146,
+          "visible": true,
+          "order": "1"
+        },
+        {
+          "label": "Paragraf und Rechtliches",
+          "x": 147,
+          "y": 146,
+          "visible": true,
+          "order": "2"
+        },
+        {
+          "label": "Fragen und Antworten",
+          "x": 199,
+          "y": 146,
+          "visible": true,
+          "order": "3"
+        }
+      ],
+      "visualOrder": [
+        "E-Mail",
+        "Paragraf und Rechtliches",
+        "Fragen und Antworten",
+        "Einkaufswagen"
+      ],
+      "searchCount": 1,
+      "cartCount": 1,
+      "overflow": false,
+      "errors": []
+    }
+  },
+  "summary": {
+    "runs": 14,
+    "fatal": 0,
+    "withErrors": 0,
+    "withOverflow": 0,
+    "withFailedImages": 0,
+    "badH1": 0,
+    "duplicateIds": 0
+  }
+}

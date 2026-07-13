@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "release": "3.1",
+    "purpose": "Funktionsgerechte Inhaltsverteilung; keine erzwungene identische Wortzahl"
+  },
+  "index.html": {
+    "sections": 5,
+    "words": 457
+  },
+  "geschichte.html": {
+    "sections": 6,
+    "words": 825
+  },
+  "modelle.html": {
+    "sections": 7,
+    "words": 651
+  },
+  "Technik.html": {
+    "sections": 8,
+    "words": 810
+  },
+  "Newsletter.html": {
+    "sections": 4,
+    "words": 501
+  },
+  "Projekt.html": {
+    "sections": 5,
+    "words": 833
+  },
+  "shop.html": {
+    "sections": 6,
+    "words": 293
+  },
+  "warenkorb.html": {
+    "sections": 4,
+    "words": 98
+  },
+  "checkout.html": {
+    "sections": 4,
+    "words": 129
+  },
+  "bestellung.html": {
+    "sections": 4,
+    "words": 87
+  },
+  "qa.html": {
+    "sections": 6,
+    "words": 356
+  },
+  "rechtliches.html": {
+    "sections": 4,
+    "words": 353
+  }
+}

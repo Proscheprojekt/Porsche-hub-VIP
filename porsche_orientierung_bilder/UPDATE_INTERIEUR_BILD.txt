@@ -1,0 +1,6 @@
+UPDATE: INTERIEUR & ASSISTENZSYSTEME
+
+- Die bisherige Interieur-Grafik wurde durch die neu bereitgestellte Infografik ersetzt.
+- Das vollständige Motiv bleibt sichtbar; es wird nicht abgeschnitten.
+- Motor-, Fahrwerk- und Aerodynamik-Grafiken bleiben unverändert.
+- Modell-Carousel, Zoom-Funktion, Header und Navigation bleiben unverändert.

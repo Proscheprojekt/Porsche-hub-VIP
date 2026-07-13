@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: geschichte.html
+  Zweck: Geschichtsseite mit Entwicklung, Generationen und historischen Informationen.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta content="notranslate" name="google"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Porsche 911 Geschichte | Porsche Experience</title>
+<meta content="Die Entwicklung des Porsche 911 von ausgewählten klassischen Baureihen bis zur Generation 992, übersichtlich erklärt und interaktiv dargestellt." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#0a0a0a" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Porsche 911 Geschichte | Porsche Experience" property="og:title"/>
+<meta content="Die Entwicklung des Porsche 911 von ausgewählten klassischen Baureihen bis zur Generation 992, übersichtlich erklärt und interaktiv dargestellt." property="og:description"/>
+<meta content="main%20web/images/porsche.webp" property="og:image"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="geschichte/style.css" rel="stylesheet"/>
+<link href="global/translate-interactive.css" rel="stylesheet"/>
+<link href="global/navigation-exact.css" rel="stylesheet"/>
+<meta content="Projektteam Porsche Experience: Daniel Wroblewski, David Hahn, Julian Krauß, Ibraham Nadeem und Falco Kneffel" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="dark" name="color-scheme"/><meta content="Porsche Experience Schulprojekt" property="og:site_name"/><meta content="Porsche 911 Geschichte | Porsche Experience" name="twitter:title"/><meta content="Die Entwicklung des Porsche 911 von ausgewählten klassischen Baureihen bis zur Generation 992, übersichtlich erklärt und interaktiv dargestellt." name="twitter:description"/><link href="global/site-harmony.css" rel="stylesheet"/><link href="global/content-media.css" rel="stylesheet"/>
+<link href="global/header-stable.css" rel="stylesheet"/>
+</head>
+<body data-page="geschichte" id="top">
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+<!-- Header: Logo, Schnellzugriff, Suche und Hauptnavigation. -->
+<header class="site-header">
+<!-- Markenbereich: Logo und Name des Schulprojekts. -->
+<div class="brand-area">
+<img alt="Logo Porsche Experience" class="brand-logo" decoding="async" fetchpriority="high" height="320" src="geschichte/assets/porsche.png" width="320"/>
+<div class="brand-copy">
+<span>Schulprojekt</span>
+<p class="brand-title">Porsche Experience</p>
+</div>
+</div>
+<!-- Mobiler Menü-Button: öffnet/schließt die Navigation auf kleinen Bildschirmen. -->
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Menü öffnen" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<!-- Navigationscontainer: enthält Schnellzugriffe, Suche und Menülinks. -->
+<div class="nav-menu" id="mainNav">
+<!-- Schnellzugriff: Icons für E-Mail, Rechtliches, FAQ und Warenkorb. -->
+<div aria-label="Schnellzugriff" class="action-area">
+<a aria-label="E-Mail" class="icon-link" href="mailto:kraussj387@gmail.com">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"></path></svg>
+</a>
+<a aria-label="Paragraf und Rechtliches" class="icon-link" href="rechtliches.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><text font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" text-anchor="middle" x="12" y="18.5">§</text></svg>
+</a>
+<a aria-label="Fragen und Antworten" class="icon-link" href="qa.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-3.1.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"></path></svg>
+</a>
+<a aria-label="Einkaufswagen" class="icon-link cart-highlight" href="warenkorb.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"></path></svg>
+</a>
+</div>
+<!-- Suche: durchsucht die wichtigsten Projektseiten und Inhalte. -->
+<form class="search-area" id="siteSearchForm" role="search">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"></path></svg>
+<input aria-autocomplete="list" aria-controls="siteSearchResults" aria-expanded="false" aria-label="Suche" autocomplete="off" id="siteSearchInput" placeholder="Suchen..." role="combobox" type="search"/>
+<div aria-label="Suchergebnisse" aria-live="polite" class="search-results" id="siteSearchResults" role="listbox"></div>
+</form>
+<!-- Hauptnavigation: Links zu den wichtigsten Unterseiten. -->
+<nav aria-label="Hauptnavigation" class="main-nav">
+<a href="index.html">Home</a>
+<a aria-current="page" class="nav-active" href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a href="Technik.html">Technik</a>
+<a href="Newsletter.html">Newsletter</a>
+<a href="Projekt.html">Projekt</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+<section aria-label="Geschichte des Porsche 911" class="hero" id="home">
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+<div class="history-content">
+<span class="section-label">Geschichte</span>
+<h1>
+        Die Entwicklung<br/>
+        einer Sportwagen-<br/>
+        Ikone
+      </h1>
+<p class="history-intro">
+        Seit <strong class="text-gold">1963</strong> entwickelt Porsche den
+        911 kontinuierlich weiter, ohne seinen unverwechselbaren Charakter
+        zu verlieren. Jede Generation verbindet die klassische Form mit
+        moderner Technik, höherer Sicherheit und präziserem Fahrverhalten.
+      </p>
+<ul class="history-highlights">
+<li>
+<strong class="text-gold">Über 60 Jahre</strong>
+          kontinuierliche Entwicklung
+        </li>
+<li>
+<strong class="text-gold">Ikonische Silhouette</strong>
+          mit hohem Wiedererkennungswert
+        </li>
+<li>
+          Vom klassischen 911 bis zur modernen
+          <strong class="text-gold">992-Generation</strong>
+</li>
+</ul>
+</div>
+<section aria-label="Historische 911-Bildauswahl" class="slider">
+<div class="year" id="yearText">930</div>
+<figure class="car-frame">
+<img alt="Porsche 911 Turbo 930" decoding="async" fetchpriority="high" height="640" id="carImage" loading="eager" src="geschichte/assets/images/911-930.webp" width="1920"/>
+</figure>
+<div class="model-panel">
+<p id="periodText">G-Serie / Turbo-Ära</p>
+<h2 id="modelText">911 Turbo 930</h2>
+<p id="descriptionText">
+          Der 930 begründete die Turbo-Ära des 911. Turboaufladung, breite Kotflügel
+          und der markante Heckspoiler machten ihn leistungsstark, kompromisslos und unverwechselbar.
+        </p>
+</div>
+<div class="slider-controls">
+<button aria-label="Vorheriges Fahrzeug" class="control-btn" id="prevBtn" type="button">‹</button>
+<div aria-label="Position im Slider" aria-orientation="horizontal" aria-valuemin="1" class="progress" id="progressTrack" role="slider" tabindex="0">
+</div>
+<button aria-label="Nächstes Fahrzeug" class="control-btn" id="nextBtn" type="button">›</button>
+</div>
+</section>
+</section>
+<section class="info-section" id="geschichte-einordnung">
+<div class="section-heading">
+<p class="eyebrow">Historische Einordnung</p>
+<h2>Was die 911-Geschichte besonders macht</h2>
+<p>
+        Porsche hat den 911 über Jahrzehnte nicht komplett neu erfunden, sondern
+        schrittweise weiterentwickelt. Genau dadurch bleibt der Wagen sofort erkennbar,
+        obwohl Technik, Leistung, Sicherheit und Bedienung stark moderner wurden.
+      </p>
+</div>
+<div class="info-grid">
+<article class="info-card">
+<h3>Wiedererkennung</h3>
+<p>
+          Die flache Front, die runden Scheinwerfer, die abfallende Dachlinie und das
+          kräftige Heck gehören zu den wichtigsten Designmerkmalen des 911.
+        </p>
+</article>
+<article class="info-card">
+<h3>Technischer Wandel</h3>
+<p>
+          Wichtige Schritte waren unter anderem Turbo-Technik, Allradantrieb,
+          Wasserkühlung, digitale Bedienung und moderne Assistenzsysteme.
+        </p>
+</article>
+<article class="info-card">
+<h3>Klare Trennung</h3>
+<p>
+          Diese Seite behandelt die Geschichte. Aktuelle Varianten wie Carrera, Targa,
+          Turbo oder GT3 werden sauber im Bereich „Modelle“ erklärt.
+        </p>
+</article>
+</div>
+<div class="info-section section-extension" id="design-dna">
+<div class="section-heading"><p class="eyebrow">Design-DNA</p><h2>Sechs Merkmale, die Generationen verbinden</h2><p>Die Details wurden modernisiert, aber die Proportionen und die visuelle Grundidee bleiben lesbar.</p></div>
+<div class="dna-grid">
+<article class="dna-card"><figure class="card-media card-media--design-dna"><img alt="Frontansicht mit typischer runder Lichtsignatur des Porsche 911" decoding="async" height="1024" loading="lazy" src="assets/content/history-light-signature.webp" width="1536"/></figure></article>
+<article class="dna-card"><figure class="card-media card-media--design-dna"><img alt="Seitenansicht eines klassischen Porsche 911 mit abfallender Dachlinie" decoding="async" height="1024" loading="lazy" src="assets/content/history-roofline.webp" width="1536"/></figure></article>
+<article class="dna-card"><figure class="card-media card-media--design-dna"><img alt="Heckbereich eines Porsche 911 als Hinweis auf das Heckmotor-Konzept" decoding="async" height="1024" loading="lazy" src="assets/content/history-rear-engine.webp" width="1536"/></figure></article>
+<article class="dna-card"><figure class="card-media card-media--design-dna"><img alt="Kompakte flache Frontpartie eines Porsche 911" decoding="async" height="1086" loading="lazy" src="assets/content/history-compact-front.webp" width="1448"/></figure></article>
+<article class="dna-card"><figure class="card-media card-media--design-dna"><img alt="Drei Porsche-911-Generationen im direkten Vergleich" decoding="async" height="1024" loading="lazy" src="assets/content/history-evolution.webp" width="1536"/></figure></article>
+<article class="dna-card"><figure class="card-media card-media--design-dna"><img alt="Breite Heckansicht eines modernen Porsche 911" decoding="async" height="1024" loading="lazy" src="assets/content/history-wide-rear.webp" width="1536"/></figure></article>
+</div></div></section>
+<section class="timeline-section" id="timeline">
+<div class="section-heading">
+<p class="eyebrow">Bildauswahl</p>
+<h2>Generationen im vorhandenen Bildmaterial</h2>
+<p>
+        Der Slider zeigt die Generationen, für die im Projekt Bilder vorhanden sind.
+        Die vollständige historische Übersicht folgt direkt darunter.
+      </p>
+</div>
+<div aria-label="Historische 911 Generationen" class="timeline-tabs" id="timelineTabs"></div>
+</section>
+<section class="gallery-section" id="gallery">
+<div class="section-heading">
+<p class="eyebrow">Galerie</p>
+<h2>Historische 911-Generationen</h2>
+<p>
+        Die Galerie zeigt die wichtigsten Entwicklungsschritte vom 930 bis zum 992.
+        Sie ergänzt die Timeline und macht den Wandel der Form besser sichtbar.
+      </p>
+</div>
+<div class="gallery-grid">
+<article class="gallery-card">
+<img alt="Porsche 911 Turbo 930" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-930.webp" width="1920"/>
+<h3>911 Turbo 930</h3>
+</article>
+<article class="gallery-card">
+<img alt="Porsche 911 964" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-964.webp" width="1920"/>
+<h3>911 964</h3>
+</article>
+<article class="gallery-card">
+<img alt="Porsche 911 993" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-993.webp" width="1920"/>
+<h3>911 993</h3>
+</article>
+<article class="gallery-card">
+<img alt="Porsche 911 996" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-996.webp" width="1920"/>
+<h3>911 996</h3>
+</article>
+<article class="gallery-card">
+<img alt="Porsche 911 997" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-997.webp" width="1920"/>
+<h3>911 997</h3>
+</article>
+<article class="gallery-card">
+<img alt="Porsche 911 991" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-991.webp" width="1920"/>
+<h3>911 991</h3>
+</article>
+<article class="gallery-card">
+<img alt="Porsche 911 992" decoding="async" height="640" loading="lazy" src="geschichte/assets/images/911-992.webp" width="1920"/>
+<h3>911 992</h3>
+</article>
+</div>
+<div class="info-section section-extension" id="generationen-ueberblick">
+<div class="section-heading">
+<p class="eyebrow">Vollständiger Überblick</p>
+<h2>Die acht Hauptgenerationen des Porsche 911</h2>
+<p>
+        Für die fachliche Vollständigkeit zeigt diese Übersicht die Hauptgenerationen
+        des 911 von 1963 bis heute. So ist die Geschichte nicht nur optisch, sondern
+        auch inhaltlich vollständig eingeordnet.
+      </p>
+</div>
+<div aria-label="Acht Hauptgenerationen des Porsche 911" class="comparison-table generation-table" role="table">
+<div class="comparison-row comparison-head" role="row">
+<span role="columnheader">Generation</span>
+<span role="columnheader">Zeitraum</span>
+<span role="columnheader">Bedeutung</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>Original 911</strong></span>
+<span role="cell">1963 bis 1973</span>
+<span role="cell">Start der 911-Idee mit ikonischer Grundform und Sechszylinder-Boxermotor.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>G-Serie</strong></span>
+<span role="cell">1974 bis 1989</span>
+<span role="cell">Lange Bauzeit, Sicherheitsstoßfänger und prägende Turbo-Ära mit dem 930.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>964</strong></span>
+<span role="cell">1988 bis 1994</span>
+<span role="cell">Deutliche Modernisierung mit neuer Technik und modernerem Fahrverhalten.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>993</strong></span>
+<span role="cell">1993 bis 1998</span>
+<span role="cell">Letzte luftgekühlte Generation und für viele ein besonders klassischer 911.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>996</strong></span>
+<span role="cell">1997 bis 2005</span>
+<span role="cell">Großer technischer Umbruch mit Wasserkühlung und neuem Gesamtkonzept.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>997</strong></span>
+<span role="cell">2004 bis 2012</span>
+<span role="cell">Rückkehr zu klassischeren Designmerkmalen und breite Modellvielfalt.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>991</strong></span>
+<span role="cell">2011 bis 2019</span>
+<span role="cell">Größerer Radstand, moderne Plattform und weiterentwickelte Aerodynamik.</span>
+</div>
+<div class="comparison-row" role="row">
+<span role="cell"><strong>992</strong></span>
+<span role="cell">seit 2018</span>
+<span role="cell">Aktuelle Linie mit breiterem Auftritt, digitalerer Bedienung und moderner Technik.</span>
+</div>
+</div>
+</div></section>
+<section class="turning-points" id="geschichte-wendepunkte" aria-labelledby="turning-points-title">
+<div class="turning-points__container">
+<header class="turning-points__header">
+<span class="turning-points__eyebrow">Wendepunkte</span>
+<h2 id="turning-points-title" class="turning-points__title">Fünf Entwicklungen, die<br/>den 911 geprägt haben</h2>
+<p class="turning-points__intro">Diese Entwicklungen zeigen, wie der Porsche 911 technisch immer moderner wurde, ohne seinen unverwechselbaren Charakter zu verlieren.</p>
+</header>
+<div class="turning-points__grid">
+<article class="turning-card">
+<div class="turning-card__image-wrapper"><img class="turning-card__image" src="geschichte/assets/wendepunkte/turbo.webp" alt="Infografik zur Turboaufladung des Porsche 911" width="1536" height="1024" loading="lazy" decoding="async"/></div>
+<div class="turning-card__content"><span class="turning-card__number">01</span><h3 class="turning-card__title">Turboaufladung</h3><p class="turning-card__text">Mit dem 911 Turbo begann eine neue Leistungsära. Die Aufladung sorgte für deutlich mehr Kraft und prägte das breite, markante Erscheinungsbild.</p></div>
+</article>
+<article class="turning-card">
+<div class="turning-card__image-wrapper"><img class="turning-card__image" src="geschichte/assets/wendepunkte/allrad.webp" alt="Infografik zum Allradantrieb des Porsche 911" width="1672" height="941" loading="lazy" decoding="async"/></div>
+<div class="turning-card__content"><span class="turning-card__number">02</span><h3 class="turning-card__title">Allradantrieb</h3><p class="turning-card__text">Mit dem Carrera 4 erhielt der 911 erstmals Allradantrieb. Dadurch verbesserten sich Traktion, Fahrstabilität und Kontrolle.</p></div>
+</article>
+<article class="turning-card">
+<div class="turning-card__image-wrapper"><img class="turning-card__image" src="geschichte/assets/wendepunkte/wasserkuehlung.webp" alt="Infografik zur Wasserkühlung des Porsche 911" width="1536" height="1024" loading="lazy" decoding="async"/></div>
+<div class="turning-card__content"><span class="turning-card__number">03</span><h3 class="turning-card__title">Wasserkühlung</h3><p class="turning-card__text">Mit der Generation 996 wechselte der 911 von Luft- auf Wasserkühlung. Das ermöglichte mehr Leistung und modernere Motorentechnik.</p></div>
+</article>
+<article class="turning-card">
+<div class="turning-card__image-wrapper"><img class="turning-card__image" src="geschichte/assets/wendepunkte/pdk.webp" alt="Infografik zum Porsche-Doppelkupplungsgetriebe PDK" width="1536" height="1024" loading="lazy" decoding="async"/></div>
+<div class="turning-card__content"><span class="turning-card__number">04</span><h3 class="turning-card__title">PDK</h3><p class="turning-card__text">Das Porsche-Doppelkupplungsgetriebe ermöglicht besonders schnelle Gangwechsel und verbindet sportliche Leistung mit hohem Alltagskomfort.</p></div>
+</article>
+<article class="turning-card">
+<div class="turning-card__image-wrapper"><img class="turning-card__image" src="geschichte/assets/wendepunkte/digitalisierung.webp" alt="Infografik zur Digitalisierung des Porsche 911" width="1536" height="1024" loading="lazy" decoding="async"/></div>
+<div class="turning-card__content"><span class="turning-card__number">05</span><h3 class="turning-card__title">Digitalisierung</h3><p class="turning-card__text">Digitale Cockpits, Fahrprogramme und Assistenzsysteme erweitern den 911, ohne seinen klassischen Charakter zu verdrängen.</p></div>
+</article>
+</div>
+</div>
+</section>
+<section class="development-logic" id="geschichte-systemblick" aria-labelledby="development-title">
+<div class="development-logic__container">
+<header class="development-logic__header">
+<span class="development-logic__eyebrow">Entwicklungslogik</span>
+<h2 id="development-title" class="development-logic__title">Was jede Generation<br/>neu lösen musste</h2>
+<p class="development-logic__intro">Jede Generation des 911 musste Tradition und Fortschritt neu verbinden: bei <strong>Form, Fahrdynamik und Bedienung.</strong></p>
+</header>
+<div class="development-logic__grid">
+<article class="development-card" aria-label="Form: Identität bewahren">
+<figure class="development-card__image-wrapper">
+<img class="development-card__image" src="geschichte/assets/entwicklungslogik/form.webp" alt="Infografik zur Form des Porsche 911: Identität bewahren" width="1536" height="1024" loading="lazy" decoding="async"/>
+</figure>
+</article>
+<article class="development-card" aria-label="Funktion: Grenzen verschieben">
+<figure class="development-card__image-wrapper">
+<img class="development-card__image" src="geschichte/assets/entwicklungslogik/funktion.webp" alt="Infografik zur Funktion des Porsche 911: Grenzen verschieben" width="1536" height="1024" loading="lazy" decoding="async"/>
+</figure>
+</article>
+<article class="development-card" aria-label="Alltag: Bedienung verbessern">
+<figure class="development-card__image-wrapper">
+<img class="development-card__image" src="geschichte/assets/entwicklungslogik/alltag.webp" alt="Infografik zum Alltag des Porsche 911: Bedienung verbessern" width="1536" height="1024" loading="lazy" decoding="async"/>
+</figure>
+</article>
+</div>
+</div>
+</section>
+<section class="info-section" id="geschichte-fazit-einordnung">
+<div class="info-section section-extension">
+<div class="heritage-band">
+<div><span class="release-badge">Historische Lesart</span><strong>Kontinuität ist hier kein Stillstand.</strong></div>
+<p>Der 911 zeigt, dass ein Produkt über Jahrzehnte modernisiert werden kann, ohne seine Identität zu verlieren. Genau diese Balance zwischen vertrauter Form und technischer Weiterentwicklung macht die Baureihe für Design- und Technikgeschichte interessant.</p>
+</div>
+</div>
+<div class="info-section section-extension team-history-section" id="geschichte-team">
+<div class="section-heading">
+<p class="eyebrow">Projektteam</p>
+<h2>Gemeinsam entwickelt</h2>
+<p>Hinter Porsche Experience steht ein Projektteam, das Inhalte, Gestaltung und technische Funktionen gemeinsam entwickelt. Die Webseite wird nicht als einmalig fertiges Ergebnis betrachtet, sondern regelmäßig geprüft, abgestimmt und verbessert. Unser Schwerpunkt liegt auf einer professionellen, nachvollziehbaren und sorgfältigen Umsetzung. Ähnlich wie der Porsche 911 über Generationen weiterentwickelt wurde, ohne seine grundlegende Identität zu verlieren, wird auch dieses Projekt Schritt für Schritt optimiert, ohne sein ursprüngliches Konzept aus den Augen zu verlieren.</p>
+</div>
+</div>
+</section>
+<section class="history-conclusion" id="geschichte-fazit" aria-labelledby="history-conclusion-title">
+<div class="history-conclusion__container">
+<header class="history-conclusion__header">
+<span class="history-conclusion__eyebrow">Fazit</span>
+<h2 id="history-conclusion-title" class="history-conclusion__title">Tradition und<br/>Fortschritt in einer Linie</h2>
+<p class="history-conclusion__intro">Der Porsche 911 zeigt, dass technische Entwicklung und eine starke Identität kein Widerspruch sein müssen. Jede Generation wurde moderner, leistungsfähiger und alltagstauglicher, ohne ihren ursprünglichen Charakter zu verlieren.</p>
+</header>
+<div class="history-conclusion__grid">
+<article class="conclusion-card" aria-label="Fazit: Tradition">
+<figure class="conclusion-card__image-wrapper">
+<img class="conclusion-card__image" src="geschichte/assets/fazit/tradition.webp" alt="Infografik zum Fazit Tradition des Porsche 911" width="1448" height="1086" loading="lazy" decoding="async"/>
+</figure>
+</article>
+<article class="conclusion-card" aria-label="Fazit: Fortschritt">
+<figure class="conclusion-card__image-wrapper">
+<img class="conclusion-card__image" src="geschichte/assets/fazit/fortschritt.webp" alt="Infografik zum Fazit Fortschritt des Porsche 911" width="1448" height="1086" loading="lazy" decoding="async"/>
+</figure>
+</article>
+<article class="conclusion-card" aria-label="Fazit: Kontinuität">
+<figure class="conclusion-card__image-wrapper">
+<img class="conclusion-card__image" src="geschichte/assets/fazit/kontinuitaet.webp" alt="Infografik zum Fazit Kontinuität des Porsche 911" width="1448" height="1086" loading="lazy" decoding="async"/>
+</figure>
+</article>
+</div>
+</div>
+</section>
+</main><footer aria-labelledby="footer-title" class="site-footer">
+<div class="footer-shell">
+<section class="footer-lead">
+<div class="footer-brand-block">
+<a aria-label="Zur Startseite von Porsche Experience" class="footer-brand" href="index.html">
+<img alt="Porsche Experience Logo" decoding="async" height="96" loading="lazy" src="main web/images/porsche.webp" width="96"/>
+<span><small>Schul- &amp; Portfolio-Projekt</small><strong>Porsche Experience</strong></span>
+</a>
+<h2 id="footer-title">Eine interaktive Hommage an Technik, Geschichte und Design.</h2>
+<p>Konzipiert und umgesetzt als mehrseitige Webanwendung mit responsivem Design, eigener JavaScript-Logik und nachvollziehbarer Projektdokumentation.</p>
+</div>
+<div aria-label="Wichtige Projektaktionen" class="footer-lead-actions">
+<a class="footer-primary-action" href="Projekt.html">Projekt ansehen <span aria-hidden="true">↗</span></a>
+<a class="footer-secondary-action" href="README_Porsche_Experience.pdf">README-PDF <span aria-hidden="true">↓</span></a>
+</div>
+</section>
+<div aria-hidden="true" class="footer-rule"></div>
+<div class="footer-grid">
+<nav aria-label="Footer Bereich Entdecken" class="footer-column">
+<h3>Entdecken</h3>
+<a href="index.html">Startseite</a>
+<a aria-current="page" href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a href="Technik.html">Technik</a>
+</nav>
+<nav aria-label="Footer Bereich Interaktiv" class="footer-column">
+<h3>Interaktiv</h3>
+<a href="Newsletter.html">Newsletter-Demo</a>
+<a href="qa.html">Fragen &amp; Antworten</a>
+<a href="shop.html">Demo-Shop</a>
+<a href="warenkorb.html">Warenkorb</a>
+</nav>
+<nav aria-label="Footer Bereich Dokumentation" class="footer-column">
+<h3>Dokumentation</h3>
+<a href="Projekt.html">Fallstudie</a>
+<a href="rechtliches.html#quellen">Quellen &amp; Einordnung</a>
+<a href="QUELLEN_UND_LIZENZEN.md">Lizenzübersicht</a>
+<a href="TESTPROTOKOLL.md">Testprotokoll</a>
+</nav>
+<section aria-label="Projektstatus" class="footer-status-card">
+<div class="footer-status-head"><span aria-hidden="true" class="footer-live-dot"></span><strong>Release 3.1</strong></div>
+<p>Funktionsfähige lokale Demo für Schule, Präsentation und privates Bewerbungsportfolio.</p>
+<div aria-label="Verwendete Technologien" class="footer-tech-list">
+<span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Underscore.js</span>
+</div>
+</section>
+</div>
+<div class="footer-bottom">
+<div class="footer-legal-copy">
+<strong>© 2026 Porsche Experience Schulprojekt</strong>
+<span>Inoffizielles Projekt. Keine Verbindung zur Porsche AG. Keine echten Bestellungen oder Zahlungen.</span>
+</div>
+<nav aria-label="Rechtliche und technische Links" class="footer-bottom-nav">
+<a href="rechtliches.html">Rechtliches</a>
+<a href="mailto:kraussj387@gmail.com">Kontakt</a>
+<a href="#top">Nach oben <span aria-hidden="true">↑</span></a>
+</nav>
+</div>
+</div>
+</footer>
+<script data-library="Underscore.js 1.13.4 (MIT)" defer="" src="global/underscore.min.js"></script><script defer="" src="geschichte/script.js"></script>
+<script defer="" src="global/translate-interactive.js"></script>
+<script defer="" src="global/site-harmony.js"></script>
+</body>
+</html>
