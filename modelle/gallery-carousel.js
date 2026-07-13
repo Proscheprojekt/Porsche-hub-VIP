@@ -163,7 +163,7 @@
 
     let index = 0;
     let intervalId = null;
-    let isVisible = false;
+    let isVisible = true;
     let pointerStartX = 0;
     let pointerDeltaX = 0;
     let didSwipe = false;
@@ -202,7 +202,7 @@
 
     function startAutoplay() {
       stopAutoplay();
-      if (reducedMotion || !isVisible || document.hidden || lightbox.isOpenFor(api)) return;
+      //if (reducedMotion || !isVisible || document.hidden || lightbox.isOpenFor(api)) return;
       intervalId = window.setInterval(() => render(index + 1), 5200);
     }
 
