@@ -1,0 +1,10 @@
+UPDATE: Aerodynamik-Grafik
+
+Die bisherige Aerodynamik-Abbildung auf der Technik-Seite wurde durch die neue bereitgestellte Infografik ersetzt.
+Datei: assets/content/tech-aero.webp
+
+Unveraendert geblieben:
+- Boxermotor-Grafik
+- Fahrwerk-und-Bremsen-Grafik
+- Modellgalerie mit Carousel und Zoom
+- Header, Navigation und weitere Seiteninhalte

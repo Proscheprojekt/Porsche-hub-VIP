@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: Projekt.html
+  Zweck: Projektseite mit Ziel, Aufbau, Teamarbeit und Dokumentationsinhalten.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta content="notranslate" name="google"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projekt &amp; Dokumentation | Porsche Experience</title>
+<meta content="Ziele, Team, Technik, Qualitätssicherung und Projektdokumentation der mehrseitigen Porsche-Experience-Schulwebsite." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#0a0a0a" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Projekt &amp; Dokumentation | Porsche Experience" property="og:title"/>
+<meta content="Ziele, Team, Technik, Qualitätssicherung und Projektdokumentation der mehrseitigen Porsche-Experience-Schulwebsite." property="og:description"/>
+<meta content="main%20web/images/porsche.webp" property="og:image"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="Projekt/style.css" rel="stylesheet"/>
+<link href="global/translate-interactive.css" rel="stylesheet"/>
+<link href="global/navigation-exact.css" rel="stylesheet"/>
+<meta content="Projektteam Porsche Experience: Daniel Wroblewski, David Hahn, Julian Krauß, Ibraham Nadeem und Falco Kneffel" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="dark" name="color-scheme"/><meta content="Porsche Experience Schulprojekt" property="og:site_name"/><meta content="Projekt &amp; Dokumentation | Porsche Experience" name="twitter:title"/><meta content="Ziele, Team, Technik, Qualitätssicherung und Projektdokumentation der mehrseitigen Porsche-Experience-Schulwebsite." name="twitter:description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Porsche Experience",
+  "description": "Interaktives, inoffizielles Schulprojekt über Geschichte, Modelle und Technik des Porsche 911.",
+  "inLanguage": "de",
+  "educationalUse": "Schulprojekt und Portfolio",
+  "creator": [
+    {"@type":"Person","name":"Daniel Wroblewski"},
+    {"@type":"Person","name":"Julian Krauß"},
+    {"@type":"Person","name":"Ibraham Nadeem"},
+    {"@type":"Person","name":"Falco Kneffel"},
+    {"@type":"Person","name":"David Hahn"}
+  ]
+}</script><link href="global/site-harmony.css" rel="stylesheet"/><link href="global/content-media.css" rel="stylesheet"/>
+<link href="global/header-stable.css" rel="stylesheet"/>
+</head>
+<body data-page="projekt" id="top">
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+<!-- Header: Logo, Schnellzugriff, Suche und Hauptnavigation. -->
+<header class="site-header">
+<!-- Markenbereich: Logo und Name des Schulprojekts. -->
+<div class="brand-area">
+<img alt="Logo Porsche Experience" class="brand-logo" decoding="async" fetchpriority="high" height="320" src="Projekt/porsche.png" width="320"/>
+<div class="brand-copy">
+<span>Schulprojekt</span>
+<p class="brand-title">Porsche Experience</p>
+</div>
+</div>
+<!-- Mobiler Menü-Button: öffnet/schließt die Navigation auf kleinen Bildschirmen. -->
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Menü öffnen" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<!-- Navigationscontainer: enthält Schnellzugriffe, Suche und Menülinks. -->
+<div class="nav-menu" id="mainNav">
+<!-- Schnellzugriff: Icons für E-Mail, Rechtliches, FAQ und Warenkorb. -->
+<div aria-label="Schnellzugriff" class="action-area">
+<a aria-label="E-Mail" class="icon-link" href="mailto:kraussj387@gmail.com">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"></path></svg>
+</a>
+<a aria-label="Paragraf und Rechtliches" class="icon-link" href="rechtliches.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><text font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" text-anchor="middle" x="12" y="18.5">§</text></svg>
+</a>
+<a aria-label="Fragen und Antworten" class="icon-link" href="qa.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-3.1.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"></path></svg>
+</a>
+<a aria-label="Einkaufswagen" class="icon-link cart-highlight" href="warenkorb.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"></path></svg>
+</a>
+</div>
+<!-- Suche: durchsucht die wichtigsten Projektseiten und Inhalte. -->
+<form class="search-area" id="siteSearchForm" role="search">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"></path></svg>
+<input aria-autocomplete="list" aria-controls="siteSearchResults" aria-expanded="false" aria-label="Suche" autocomplete="off" id="siteSearchInput" placeholder="Suchen..." role="combobox" type="search"/>
+<div aria-label="Suchergebnisse" aria-live="polite" class="search-results" id="siteSearchResults" role="listbox"></div>
+</form>
+<!-- Hauptnavigation: Links zu den wichtigsten Unterseiten. -->
+<nav aria-label="Hauptnavigation" class="main-nav">
+<a href="index.html">Home</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a href="Technik.html">Technik</a>
+<a href="Newsletter.html">Newsletter</a>
+<a aria-current="page" class="nav-active" href="Projekt.html">Projekt</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+<section class="hero" id="projekt-intro" style="min-height:auto; padding-top:132px; padding-bottom:20px; grid-template-columns:1fr;">
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+<div class="hero-copy" style="max-width:900px; margin:0 auto; text-align:center;">
+<p class="eyebrow">Über das Projekt</p>
+<h1 style="max-width:100%;">Unser Schulprojekt: Porsche Experience</h1>
+<p style="margin:18px auto 0; max-width:760px;">
+          „Porsche Experience“ ist eine mehrseitige Website, die im Rahmen eines
+          Schulprojekts entstanden ist. Ziel war es, ein reales, ansprechendes
+          Web-Design umzusetzen und dabei HTML, CSS und JavaScript praktisch
+          anzuwenden – am Beispiel der Modellgeschichte des Porsche 911.
+        </p>
+</div>
+<div class="summary-section section-extension"><p style="text-align:center; margin:0 0 20px;"><span class="release-badge">First-Class Release 3.1</span></p>
+<div class="summary-card">
+<p>
+<strong>Worum geht es?</strong> Die Website führt Besucher:innen durch die
+          Welt des Porsche 911: von seiner über 60-jährigen Geschichte über die
+          einzelnen Modellgenerationen bis hin zur Technik, die das Fahrzeug bis
+          heute prägt. Jede Unterseite behandelt einen eigenen Themenschwerpunkt,
+          ist aber optisch und funktional Teil eines einheitlichen Gesamtauftritts.
+        </p>
+<p>
+<strong>Aufbau der Seite.</strong> Alle Seiten teilen sich denselben
+          Kopfbereich mit Logo, Suche, Schnellzugriff-Icons und Hauptnavigation.
+          Jede Unterseite bringt ihre eigenen CSS- und JavaScript-Dateien in einem
+          eigenen Ordner mit, sodass jeder Themenbereich unabhängig gepflegt und
+          erweitert werden kann.
+        </p>
+<p><strong>Technischer Rahmen.</strong> Das Projekt nutzt HTML5, CSS3 und Vanilla-JavaScript. Ergänzend ist Underscore.js 1.13.4 als lokal eingebundene externe MIT-Library integriert; sie begrenzt Resize-Ereignisse per Debouncing. Die Kernfunktionen wie Suche, Slider, Formularprüfung und Warenkorb wurden weiterhin selbst umgesetzt und bleiben deshalb gut erklärbar.</p>
+</div>
+<div class="stat-row">
+<div class="stat-box"><strong>13</strong><span>HTML-Seiten inklusive Start-Hinweis</span></div>
+<div class="stat-box"><strong>8</strong><span>Hauptgenerationen in der Übersicht</span></div>
+<div class="stat-box"><strong>4</strong><span>Technologien inklusive externer Library</span></div>
+<div class="stat-box"><strong>1</strong><span>konsistentes Designsystem</span></div>
+</div>
+</div></section>
+<section class="timeline-section" id="projekt-sitemap">
+<div class="section-heading">
+<h2 class="eyebrow">Seiten im Überblick</h2>
+<p>So ist die Website aufgebaut – ein kurzer Wegweiser durch alle Bereiche.</p>
+</div>
+<div class="sitemap-grid">
+<a class="sitemap-card" href="index.html">
+<span class="tag">Startseite</span>
+<h3>Home</h3>
+<p>Bild- und Video-Karussell als Einstieg mit den stärksten Motiven des Projekts.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="geschichte.html">
+<span class="tag">Historie</span>
+<h3>Geschichte</h3>
+<p>Die Entwicklung des 911 von der Baureihe 930 bis zur aktuellen 992-Generation.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="modelle.html">
+<span class="tag">Fahrzeuge</span>
+<h3>Modelle</h3>
+<p>Vergleich der Generationen inklusive Slider, Zeitleiste und Bildergalerie.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="Technik.html">
+<span class="tag">Engineering</span>
+<h3>Technik</h3>
+<p>Motor, Fahrwerk, Aerodynamik und Assistenzsysteme mit Beispiel-Datenblatt.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="Newsletter.html">
+<span class="tag">Updates</span>
+<h3>Newsletter</h3>
+<p>Anmeldeformular, um Neuigkeiten zum Projekt per E-Mail zu erhalten.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="Projekt.html">
+<span class="tag">Über uns</span>
+<h3>Projekt</h3>
+<p>Diese Seite: Ziele, Aufbau und die verwendeten Techniken im Überblick.</p>
+<span class="go">Du bist hier</span>
+</a>
+<a class="sitemap-card" href="shop.html">
+<span class="tag">Demo-Shop</span>
+<h3>Shop</h3>
+<p>Produktübersicht, Warenkorb und Checkout als Frontend-Demo ohne echte Zahlung.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="qa.html">
+<span class="tag">Hilfe</span>
+<h3>Fragen &amp; Antworten</h3>
+<p>Kurze Erklärungen zur Website, zum Schulprojekt und zum Demo-Shop.</p>
+<span class="go">Zur Seite →</span>
+</a>
+<a class="sitemap-card" href="rechtliches.html">
+<span class="tag">Transparenz</span>
+<h3>Rechtliches</h3>
+<p>Hinweise zu Inoffiziellkeit, Marken, Bildern, Datenschutz und Quellen.</p>
+<span class="go">Zur Seite →</span>
+</a>
+</div>
+</section>
+<section class="gallery-section" id="projekt-stack">
+<div class="section-heading">
+<h2 class="eyebrow">Eingesetzte Technik</h2>
+</div>
+<div class="tech-stack">
+<span class="tech-pill">HTML5</span>
+<span class="tech-pill">CSS3 (Custom Properties, Grid, Flexbox)</span>
+<span class="tech-pill">Vanilla JavaScript</span>
+<span class="tech-pill">Responsive Design</span>
+<span class="tech-pill">Karussell &amp; Slider</span>
+<span class="tech-pill">Newsletter-Formular</span>
+<span class="tech-pill">Demo-Shop mit Warenkorb</span>
+<span class="tech-pill">Rechtliches &amp; FAQ</span>
+<span class="tech-pill">Underscore.js 1.13.4 (MIT)</span></div>
+<div class="info-section section-extension" id="projekt-team">
+<div class="section-heading">
+<p class="eyebrow">Team und Verantwortung</p>
+<h2>Gemeinsam entwickelt, nachvollziehbar dokumentiert</h2>
+<p>Das Projekt verbindet Gruppenarbeit mit einer klar dokumentierten Abschluss- und Qualitätsüberarbeitung.</p>
+</div>
+<div class="info-grid">
+<article class="info-card">
+<h3>Projektteam</h3>
+<ul class="clean-list"><li>Daniel Wroblewski</li><li>David Hahn</li><li>Julian Krauß</li><li>Ibraham Nadeem</li><li>Falco Kneffel</li></ul>
+</article>
+<article class="info-card">
+<figure class="card-media" style="aspect-ratio:auto;height:100%;flex:1 1 auto;"><img alt="Gruppenarbeit-Emblem: fünf Teammitglieder um einen Porsche 911" decoding="async" loading="lazy" src="assets/content/projekt-gruppenarbeit-logo.webp" style="object-fit:cover;width:100%;height:100%;background:#0a0a0a;"/></figure>
+</article>
+<article class="info-card">
+<h3>Präsentationsprinzip</h3>
+<p>Jede Funktion ist im Quellcode kommentiert und kann anhand einer konkreten Nutzeraktion erklärt werden: Eingabe, Verarbeitung, sichtbares Ergebnis und Fehlerbehandlung.</p>
+</article>
+</div>
+</div></section>
+<section class="info-section" id="projekt-fallstudie">
+<div class="section-heading">
+<p class="eyebrow">Fallstudie</p>
+<h2>Vom Schulauftrag zur vorzeigbaren Webanwendung</h2>
+</div>
+<div class="info-grid two">
+<article class="text-panel">
+<h3>Ausgangslage und Ziel</h3>
+<p>Aus einzelnen Themenbereichen sollte eine zusammenhängende Website entstehen, die technisch nachvollziehbar bleibt und gleichzeitig deutlich hochwertiger als eine typische Übungsseite wirkt.</p>
+</article>
+<article class="text-panel">
+<h3>Zentrale Herausforderungen</h3>
+<p>Viele Unterseiten, große Medien, mobile Navigation, konsistente Gestaltung, lokale Datenspeicherung und verständliche Präsentation mussten miteinander vereinbart werden.</p>
+</article>
+<article class="text-panel">
+<h3>Umgesetzte Lösungen</h3>
+<p>Ein gemeinsames visuelles System, responsive Layouts, semantische HTML-Struktur, Tastaturbedienung, reduzierte Bewegung, optimierte Medien und transparente Demo-Abläufe bilden die technische Lösung.</p>
+</article>
+<article class="text-panel">
+<h3>Qualitätssicherung</h3>
+<p>Geprüft wurden interne Verweise, eindeutige IDs, JavaScript-Syntax, Formularzustände, mobile Ansichten, Tastaturfokus, Warenkorb-Ablauf und die Darstellung der wichtigsten Seiten im Browser.</p>
+</article>
+</div>
+<div aria-label="Projektdokumentation" class="project-downloads">
+<a class="primary-btn" href="README_Porsche_Experience.pdf">README-PDF öffnen</a>
+<a class="secondary-btn" href="QUELLEN_UND_LIZENZEN.md">Quellen- und Lizenzübersicht</a>
+<a class="secondary-btn" href="TESTPROTOKOLL.md">Testprotokoll öffnen</a>
+</div>
+<div class="info-section section-extension" id="projekt-ziele">
+<div class="section-heading">
+<p class="eyebrow">Projektziele</p>
+<h2>Was die Website leisten soll</h2>
+<p>
+          Die Seite soll nicht nur gut aussehen, sondern auch einen klaren Zweck erfüllen:
+          Sie informiert, strukturiert Wissen und zeigt, dass HTML, CSS und JavaScript
+          sinnvoll zusammenarbeiten können.
+        </p>
+</div>
+<div class="info-grid">
+<article class="info-card">
+<h3>Informieren</h3>
+<p>Besucher erhalten einen verständlichen Überblick über Geschichte, Modelle und Technik des Porsche 911.</p>
+</article>
+<article class="info-card">
+<h3>Präsentieren</h3>
+<p>Die Inhalte sind so aufgebaut, dass sie sich für eine Schulpräsentation oder Projektbewertung eignen.</p>
+</article>
+<article class="info-card">
+<h3>Interagieren</h3>
+<p>Karussell, Suche, Newsletter, Shop-Demo und Warenkorb zeigen praktische JavaScript-Funktionen.</p>
+</article>
+</div>
+</div></section>
+<section class="info-section" id="projekt-qualitaet">
+<div class="section-heading">
+<p class="eyebrow">Qualität</p>
+<h2>Warum das Projekt professioneller wirkt</h2>
+</div>
+<div class="info-grid two">
+<article class="text-panel">
+<h3>Klare Seitenlogik</h3>
+<p>
+            Jede Seite hat eine Aufgabe: Home führt ein, Geschichte erklärt die Entwicklung,
+            Modelle vergleichen Generationen, Technik macht die Funktionsweise verständlich,
+            der Newsletter zeigt Formularlogik und der Shop demonstriert Warenkorb-Abläufe.
+          </p>
+</article>
+<article class="text-panel">
+<h3>Saubere Abgrenzung</h3>
+<p>
+            Weil es sich um ein inoffizielles Schulprojekt handelt, sind Shop, Newsletter
+            und rechtliche Hinweise deutlich als Demo gekennzeichnet. Dadurch wirkt die
+            Website glaubwürdiger und sauberer.
+          </p>
+</article>
+</div>
+<div class="info-section section-extension" id="projekt-qualitaetsgates">
+<div class="section-heading"><p class="eyebrow">Qualitätssicherung</p><h2>Zwölf Prüfbereiche vor der Veröffentlichung</h2><p>Die Website wurde nicht nur optisch bewertet. Jede Release-Version muss nachvollziehbare technische und inhaltliche Kriterien erfüllen.</p></div>
+<div class="quality-grid">
+<article class="quality-card"><h3>Semantik &amp; Navigation</h3><p>Ein H1 pro Seite, logische Überschriften, eindeutiger Aktivstatus und konsistente Pfade.</p></article>
+<article class="quality-card"><h3>Responsive Layout</h3><p>Keine Überlappungen, keine horizontalen Scrollfehler und ausreichend große Touch-Ziele.</p></article>
+<article class="quality-card"><h3>Performance</h3><p>WebP-Bilder, komprimierte Medien, Lazy Loading und lokale Abhängigkeiten reduzieren Ladezeit.</p></article>
+<article class="quality-card"><h3>Barrierefreiheit</h3><p>Tastaturbedienung, Fokuszustände, Alternativtexte, Skip-Link und Bewegungsreduktion.</p></article>
+<article class="quality-card"><h3>Datenschutz</h3><p>Demo-Daten bleiben lokal; persönliche Checkout-Daten werden nicht in URLs geschrieben.</p></article>
+<article class="quality-card"><h3>Präsentierbarkeit</h3><p>Getrennte Seitenordner, verständliche Funktionen und reduzierte Kommentare machen den Code erklärbar.</p></article>
+</div></div><div class="info-section section-extension" id="projekt-quellen">
+<div class="section-heading">
+<p class="eyebrow">Quellenhinweis</p>
+<h2>Fakten sauber einordnen</h2>
+<p>
+          Technische Daten und historische Einordnungen wurden vorsichtig formuliert und
+          an offiziellen Porsche-/Porsche-Newsroom-Informationen orientiert. Die Texte sind
+          für ein Schulprojekt zusammengefasst und nicht als offizieller Porsche-Auftritt gedacht.
+        </p>
+</div>
+</div><div class="project-closing-callout" id="projekt-abschluss">
+<div class="project-closing-copy">
+<h2 class="eyebrow">Unser Schulprojekt</h2>
+<p>
+          Danke fürs Vorbeischauen! Diese Website wurde mit viel Liebe zum Detail
+          als Schulprojekt entwickelt und wird laufend weiter verbessert.
+        </p>
+</div>
+</div></section>
+</main><footer aria-labelledby="footer-title" class="site-footer">
+<div class="footer-shell">
+<section class="footer-lead">
+<div class="footer-brand-block">
+<a aria-label="Zur Startseite von Porsche Experience" class="footer-brand" href="index.html">
+<img alt="Porsche Experience Logo" decoding="async" height="96" loading="lazy" src="main web/images/porsche.webp" width="96"/>
+<span><small>Schul- &amp; Portfolio-Projekt</small><strong>Porsche Experience</strong></span>
+</a>
+<h2 id="footer-title">Eine interaktive Hommage an Technik, Geschichte und Design.</h2>
+<p>Konzipiert und umgesetzt als mehrseitige Webanwendung mit responsivem Design, eigener JavaScript-Logik und nachvollziehbarer Projektdokumentation.</p>
+</div>
+<div aria-label="Wichtige Projektaktionen" class="footer-lead-actions">
+<a aria-current="page" class="footer-primary-action" href="Projekt.html">Projekt ansehen <span aria-hidden="true">↗</span></a>
+<a class="footer-secondary-action" href="README_Porsche_Experience.pdf">README-PDF <span aria-hidden="true">↓</span></a>
+</div>
+</section>
+<div aria-hidden="true" class="footer-rule"></div>
+<div class="footer-grid">
+<nav aria-label="Footer Bereich Entdecken" class="footer-column">
+<h3>Entdecken</h3>
+<a href="index.html">Startseite</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a href="Technik.html">Technik</a>
+</nav>
+<nav aria-label="Footer Bereich Interaktiv" class="footer-column">
+<h3>Interaktiv</h3>
+<a href="Newsletter.html">Newsletter-Demo</a>
+<a href="qa.html">Fragen &amp; Antworten</a>
+<a href="shop.html">Demo-Shop</a>
+<a href="warenkorb.html">Warenkorb</a>
+</nav>
+<nav aria-label="Footer Bereich Dokumentation" class="footer-column">
+<h3>Dokumentation</h3>
+<a aria-current="page" href="Projekt.html">Fallstudie</a>
+<a href="rechtliches.html#quellen">Quellen &amp; Einordnung</a>
+<a href="QUELLEN_UND_LIZENZEN.md">Lizenzübersicht</a>
+<a href="TESTPROTOKOLL.md">Testprotokoll</a>
+</nav>
+<section aria-label="Projektstatus" class="footer-status-card">
+<div class="footer-status-head"><span aria-hidden="true" class="footer-live-dot"></span><strong>Release 3.1</strong></div>
+<p>Funktionsfähige lokale Demo für Schule, Präsentation und privates Bewerbungsportfolio.</p>
+<div aria-label="Verwendete Technologien" class="footer-tech-list">
+<span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Underscore.js</span>
+</div>
+</section>
+</div>
+<div class="footer-bottom">
+<div class="footer-legal-copy">
+<strong>© 2026 Porsche Experience Schulprojekt</strong>
+<span>Inoffizielles Projekt. Keine Verbindung zur Porsche AG. Keine echten Bestellungen oder Zahlungen.</span>
+</div>
+<nav aria-label="Rechtliche und technische Links" class="footer-bottom-nav">
+<a href="rechtliches.html">Rechtliches</a>
+<a href="mailto:kraussj387@gmail.com">Kontakt</a>
+<a href="#top">Nach oben <span aria-hidden="true">↑</span></a>
+</nav>
+</div>
+</div>
+</footer>
+<script data-library="Underscore.js 1.13.4 (MIT)" defer="" src="global/underscore.min.js"></script><script defer="" src="Projekt/script.js"></script>
+<script defer="" src="global/translate-interactive.js"></script>
+<script defer="" src="global/site-harmony.js"></script>
+</body>
+</html>

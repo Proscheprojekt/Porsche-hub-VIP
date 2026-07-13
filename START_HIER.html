@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Start-Hinweis | Porsche Experience</title>
+<meta content="Hinweise zum lokalen Start und zur Präsentation der Porsche-Experience-Schulwebsite." name="description"/>
+<meta content="noindex, follow" name="robots"/>
+<meta content="dark" name="color-scheme"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<style>
+    :root{color-scheme:dark;--gold:#d7b45a;--surface:#121212;--line:rgba(215,180,90,.42)}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#050505;color:#f2e8d5;font-family:Arial,sans-serif}
+    main{width:min(820px,100%);padding:clamp(26px,5vw,48px);border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:0 20px 70px rgba(0,0,0,.5)}
+    h1{margin-top:0;color:var(--gold);font-size:clamp(2rem,5vw,3.4rem)}
+    h2{margin-top:2rem;color:#fff}
+    p,li{line-height:1.65}
+    code{background:#1d1d1d;padding:2px 7px;border-radius:6px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    a{display:inline-flex;padding:13px 20px;border:1px solid var(--gold);border-radius:999px;color:#f5ddb0;text-decoration:none;font-weight:800}
+    a.primary{background:var(--gold);color:#050505}
+    a:focus-visible{outline:3px solid #ffe28a;outline-offset:3px}
+  
+    body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+    .start-footer{width:min(820px,100%);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 22px;border:1px solid rgba(215,180,90,.25);border-radius:18px;background:#0d0d0e;color:#c9c0b2}
+    .start-footer div{display:flex;flex-direction:column;gap:4px}.start-footer strong{color:#fff}.start-footer span{font-size:.85rem}
+    .start-footer nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}.start-footer a{padding:8px 12px;border-color:rgba(215,180,90,.3);font-size:.86rem}
+    @media(max-width:620px){.start-footer{align-items:flex-start;flex-direction:column}.start-footer nav{justify-content:flex-start}}
+</style>
+<link href="global/site-harmony.css" rel="stylesheet"/>
+</head>
+<body data-page="start" id="top"><a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+<main id="main-content" tabindex="-1">
+<p>Porsche Experience · Schulprojekt</p>
+<h1>Website sauber starten</h1>
+<p>Die ZIP-Datei zuerst vollständig entpacken. Für die zuverlässigste Präsentation sollte die Website über einen lokalen Webserver geöffnet werden.</p>
+<h2>Empfohlener Start</h2>
+<ol>
+<li>Projektordner in Visual Studio Code öffnen.</li>
+<li><code>index.html</code> mit der Erweiterung „Live Server“ starten.</li>
+<li>Alternativ im Projektordner <code>python -m http.server 8000</code> ausführen.</li>
+<li>Im Browser <code>http://localhost:8000</code> öffnen.</li>
+</ol>
+<h2>Vor der Präsentation</h2>
+<ul>
+<li>Startseite, mobile Navigation, Suche, Slider und Sprachumschaltung testen.</li>
+<li>Im Demo-Shop einen Artikel bis zur Bestellbestätigung durchspielen.</li>
+<li>README-PDF und Projektseite für die technische Erklärung bereithalten.</li>
+</ul>
+<div class="actions">
+<a class="primary" href="index.html">Website starten</a>
+<a href="README_Porsche_Experience.pdf">README-PDF öffnen</a>
+</div>
+</main>
+<footer class="start-footer"><div><strong>Porsche Experience</strong><span>Release 3.1 · Schul- und Portfolio-Projekt</span></div><nav aria-label="Startseiten-Footer"><a href="index.html">Website</a><a href="Projekt.html">Projekt</a><a href="rechtliches.html">Rechtliches</a></nav></footer><script defer="" src="global/site-harmony.js"></script>
+</body>
+</html>

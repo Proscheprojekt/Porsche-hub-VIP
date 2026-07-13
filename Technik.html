@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: Technik.html
+  Zweck: Technik-Seite mit Erklärungen zu Motor, Fahrwerk, Aerodynamik und Bedienung.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta content="notranslate" name="google"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Porsche 911 Technik | Porsche Experience</title>
+<meta content="Boxermotor, Getriebe, Fahrwerk, Bremsen, Aerodynamik und Assistenzsysteme des Porsche 911 verständlich erklärt." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#0a0a0a" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Porsche 911 Technik | Porsche Experience" property="og:title"/>
+<meta content="Boxermotor, Getriebe, Fahrwerk, Bremsen, Aerodynamik und Assistenzsysteme des Porsche 911 verständlich erklärt." property="og:description"/>
+<meta content="main%20web/images/porsche.webp" property="og:image"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="Technik/style.css" rel="stylesheet"/>
+<link href="global/translate-interactive.css" rel="stylesheet"/>
+<link href="global/navigation-exact.css" rel="stylesheet"/>
+<meta content="Projektteam Porsche Experience: Daniel Wroblewski, David Hahn, Julian Krauß, Ibraham Nadeem und Falco Kneffel" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="dark" name="color-scheme"/><meta content="Porsche Experience Schulprojekt" property="og:site_name"/><meta content="Porsche 911 Technik | Porsche Experience" name="twitter:title"/><meta content="Boxermotor, Getriebe, Fahrwerk, Bremsen, Aerodynamik und Assistenzsysteme des Porsche 911 verständlich erklärt." name="twitter:description"/><link href="global/site-harmony.css" rel="stylesheet"/><link href="global/content-media.css" rel="stylesheet"/>
+<link href="global/header-stable.css" rel="stylesheet"/>
+</head>
+<body data-page="technik" id="top">
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+<!-- Header: Logo, Schnellzugriff, Suche und Hauptnavigation. -->
+<header class="site-header">
+<!-- Markenbereich: Logo und Name des Schulprojekts. -->
+<div class="brand-area">
+<img alt="Logo Porsche Experience" class="brand-logo" decoding="async" fetchpriority="high" height="320" src="Technik/porsche.png" width="320"/>
+<div class="brand-copy">
+<span>Schulprojekt</span>
+<p class="brand-title">Porsche Experience</p>
+</div>
+</div>
+<!-- Mobiler Menü-Button: öffnet/schließt die Navigation auf kleinen Bildschirmen. -->
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Menü öffnen" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<!-- Navigationscontainer: enthält Schnellzugriffe, Suche und Menülinks. -->
+<div class="nav-menu" id="mainNav">
+<!-- Schnellzugriff: Icons für E-Mail, Rechtliches, FAQ und Warenkorb. -->
+<div aria-label="Schnellzugriff" class="action-area">
+<a aria-label="E-Mail" class="icon-link" href="mailto:kraussj387@gmail.com">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"></path></svg>
+</a>
+<a aria-label="Paragraf und Rechtliches" class="icon-link" href="rechtliches.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><text font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" text-anchor="middle" x="12" y="18.5">§</text></svg>
+</a>
+<a aria-label="Fragen und Antworten" class="icon-link" href="qa.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-3.1.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"></path></svg>
+</a>
+<a aria-label="Einkaufswagen" class="icon-link cart-highlight" href="warenkorb.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"></path></svg>
+</a>
+</div>
+<!-- Suche: durchsucht die wichtigsten Projektseiten und Inhalte. -->
+<form class="search-area" id="siteSearchForm" role="search">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"></path></svg>
+<input aria-autocomplete="list" aria-controls="siteSearchResults" aria-expanded="false" aria-label="Suche" autocomplete="off" id="siteSearchInput" placeholder="Suchen..." role="combobox" type="search"/>
+<div aria-label="Suchergebnisse" aria-live="polite" class="search-results" id="siteSearchResults" role="listbox"></div>
+</form>
+<!-- Hauptnavigation: Links zu den wichtigsten Unterseiten. -->
+<nav aria-label="Hauptnavigation" class="main-nav">
+<a href="index.html">Home</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a aria-current="page" class="nav-active" href="Technik.html">Technik</a>
+<a href="Newsletter.html">Newsletter</a>
+<a href="Projekt.html">Projekt</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+<section class="hero" id="technik-intro" style="min-height:auto; padding-top:132px; padding-bottom:20px; grid-template-columns:1fr;">
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+<div class="hero-copy" style="max-width:900px; margin:0 auto; text-align:center;">
+<p class="eyebrow">Ingenieurskunst</p>
+<h1 style="max-width:100%;">Die Technik hinter dem Mythos</h1>
+<p style="margin:18px auto 0; max-width:760px;">
+          Der Porsche 911 steht seit Jahrzehnten für eine ganz eigene Philosophie: der
+          Motor sitzt hinten, angetrieben werden die Hinterräder (oder alle vier), und
+          jede Generation verfeinert dieses Grundkonzept mit neuer Technik, ohne die
+          ursprüngliche Idee zu verraten. Diese Seite zeigt die wichtigsten technischen
+          Bausteine, die den 911 zu dem machen, was er ist.
+        </p>
+</div>
+</section>
+<section class="timeline-section" id="technik-bereiche">
+<div class="section-heading">
+<h2 class="eyebrow">Technikbereiche</h2>
+<p>Vier Bereiche, die zusammen das Fahrerlebnis eines 911 ausmachen.</p>
+</div>
+<div aria-label="Technikthema auswählen" class="tech-tabs" id="techTabs" role="tablist">
+<button aria-selected="true" class="tech-tab is-active" data-panel="motor" role="tab" tabindex="0" type="button">Motor &amp; Antrieb</button>
+<button aria-selected="false" class="tech-tab" data-panel="fahrwerk" role="tab" tabindex="-1" type="button">Fahrwerk &amp; Bremsen</button>
+<button aria-selected="false" class="tech-tab" data-panel="aero" role="tab" tabindex="-1" type="button">Aerodynamik</button>
+<button aria-selected="false" class="tech-tab" data-panel="interieur" role="tab" tabindex="-1" type="button">Interieur &amp; Assistenz</button>
+</div>
+<div class="tech-topic-layout"><figure class="tech-topic-visual"><img alt="Technische Illustration zum Boxermotor und Antrieb des Porsche 911" decoding="async" height="941" id="techTopicImage" loading="eager" src="assets/content/tech-motor.webp" width="1672"/></figure><div class="tech-panels">
+<article aria-live="polite" class="tech-panel is-active" data-panel="motor" role="tabpanel">
+<div>
+<h3>Boxermotor im Heck</h3>
+<p>
+              Kennzeichnend für den 911 ist der Boxermotor, der hinter der Hinterachse
+              sitzt. Die gegenüberliegend angeordneten Zylinder sorgen für einen
+              niedrigen Schwerpunkt und einen unverwechselbaren Klang.
+            </p>
+<ul>
+<li><strong>Bauart:</strong> Sechszylinder-Boxer, meist mit Turboaufladung</li>
+<li><strong>Getriebe:</strong> Doppelkupplungsgetriebe (PDK) oder Handschaltung</li>
+<li><strong>Antrieb:</strong> Heckantrieb (Carrera) oder Allradantrieb (Carrera 4)</li>
+</ul>
+</div>
+</article>
+<article aria-live="polite" class="tech-panel" data-panel="fahrwerk" hidden="" role="tabpanel">
+<div>
+<h3>Fahrwerk &amp; Bremsen</h3>
+<p>
+              Adaptive Dämpfersysteme passen die Fahrwerksabstimmung in Echtzeit an
+              Fahrbahn und Fahrstil an. Große, innenbelüftete Bremsscheiben sorgen für
+              verlässliche Verzögerung auch bei hohem Tempo.
+            </p>
+<ul>
+<li><strong>PASM:</strong> adaptive Dämpferregelung, wählbar zwischen Komfort und Sport</li>
+<li><strong>Hinterachslenkung:</strong> mehr Agilität in der Stadt, mehr Stabilität bei Tempo</li>
+<li><strong>Bremsen:</strong> optional keramische Hochleistungsbremsanlage (PCCB)</li>
+</ul>
+</div>
+</article>
+<article aria-live="polite" class="tech-panel" data-panel="aero" hidden="" role="tabpanel">
+<div>
+<h3>Aerodynamik</h3>
+<p>
+              Ein ausfahrbarer Heckspoiler erzeugt bei hohem Tempo zusätzlichen
+              Anpressdruck, während er im Alltag flach anliegt und den
+              Luftwiderstand gering hält. Aktive Kühlluftklappen regeln zudem, wie
+              viel Luft für die Kühlung benötigt wird.
+            </p>
+<ul>
+<li><strong>Heckspoiler:</strong> geschwindigkeitsabhängig ausfahrbar</li>
+<li><strong>Luftklappen:</strong> aktiv geregelt für Kühlung und Effizienz</li>
+<li><strong>Unterboden:</strong> weitgehend verkleidet für einen sauberen Luftstrom</li>
+</ul>
+</div>
+</article>
+<article aria-live="polite" class="tech-panel" data-panel="interieur" hidden="" role="tabpanel">
+<div>
+<h3>Interieur &amp; Assistenzsysteme</h3>
+<p>
+              Ein digitales Kombiinstrument, ein zentrales Touch-Display und eine
+              wachsende Zahl an Assistenzsystemen verbinden klassisches Fahrgefühl
+              mit moderner Alltagstauglichkeit.
+            </p>
+<ul>
+<li><strong>Sport Chrono Paket:</strong> zusätzliche Fahrmodi und Rundenzeitmessung</li>
+<li><strong>Fahrassistenten:</strong> Abstandsregeltempostat, Spurhalte- und Notbremsassistent</li>
+<li><strong>Cockpit:</strong> digitale Anzeigen kombiniert mit klassisch mittigem Drehzahlmesser</li>
+</ul>
+</div>
+</article>
+</div></div>
+</section>
+<section class="spec-section" id="technische-daten">
+<div class="section-heading">
+<h2 class="eyebrow">Technische Daten</h2>
+<p>
+          Beispielhafte offizielle Orientierungswerte aktueller 911-Carrera-Modelle.
+          Die Werte dienen im Schulprojekt zur Einordnung und können je nach Markt,
+          Ausstattung und Modelljahr abweichen.
+        </p>
+</div>
+<div class="spec-table-wrap">
+<div aria-label="Technische Daten horizontal scrollbar" class="table-scroll" role="region" tabindex="0"><table class="spec-table">
+<tbody>
+<tr>
+<th>911 Carrera</th>
+<td>290 kW / 394 PS, 0–100 km/h in ca. 3,9 s mit Sport Chrono, ca. 294 km/h Höchstgeschwindigkeit</td>
+</tr>
+<tr>
+<th>911 Carrera S</th>
+<td>353 kW / 480 PS, 0–100 km/h in ca. 3,3 s mit Sport Chrono, ca. 308 km/h Höchstgeschwindigkeit</td>
+</tr>
+<tr>
+<th>Motorprinzip</th>
+<td>Sechszylinder-Boxermotor im Heckbereich, je nach Modell mit Turboaufladung oder besonderer Sportauslegung</td>
+</tr>
+<tr>
+<th>Getriebe</th>
+<td>PDK-Doppelkupplungsgetriebe oder modellabhängig Handschaltung</td>
+</tr>
+<tr>
+<th>Antrieb</th>
+<td>Heckantrieb oder Allradantrieb je nach Modellvariante</td>
+</tr>
+<tr>
+<th>Hinweis</th>
+<td>Keine Kaufberatung, sondern eine technische Erklärung für ein inoffizielles Schulprojekt.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</section>
+<section class="gallery-section" id="technik-system">
+<div class="section-heading"><p class="eyebrow">System statt Einzelteil</p><h2>Vom Fahrerwunsch zur kontrollierten Bewegung</h2><p>Die technische Qualität entsteht erst, wenn alle Baugruppen in derselben Situation zusammenarbeiten.</p></div>
+<div class="system-flow">
+<article><strong>1. Eingabe</strong><p>Lenkung, Bremse und Gaspedal übersetzen den Fahrerwunsch in Signale.</p></article>
+<article><strong>2. Leistung</strong><p>Motor und Getriebe stellen die passende Kraft bereit und dosieren sie.</p></article>
+<article><strong>3. Kontrolle</strong><p>Fahrwerk, Bremsen und Regelsysteme stabilisieren das Fahrzeug.</p></article>
+<article><strong>4. Rückmeldung</strong><p>Lenkung, Sitz und Anzeigen vermitteln dem Fahrer, was das Auto gerade macht.</p></article>
+</div></section>
+<section class="info-section" id="technik-verstaendlich">
+<div class="section-heading">
+<p class="eyebrow">Einfach erklärt</p>
+<h2>Warum diese Technik zusammenarbeitet</h2>
+<p>
+          Ein Sportwagen besteht nicht nur aus Motorleistung. Entscheidend ist, wie
+          Motor, Getriebe, Fahrwerk, Bremsen und Aerodynamik zusammenspielen.
+        </p>
+</div>
+<div class="process-steps">
+<article>
+<h3>Leistung</h3>
+<p>Der Motor liefert Kraft und Beschleunigung. Beim 911 ist der Boxermotor ein wichtiges Erkennungsmerkmal.</p>
+</article>
+<article>
+<h3>Übertragung</h3>
+<p>Getriebe und Antrieb bringen die Leistung kontrolliert auf die Straße.</p>
+</article>
+<article>
+<h3>Kontrolle</h3>
+<p>Fahrwerk, Bremsen und Assistenzsysteme helfen, das Auto präzise und sicher zu bewegen.</p>
+</article>
+<article>
+<h3>Stabilität</h3>
+<p>Aerodynamik und Karosserieform unterstützen Fahrverhalten, Kühlung und hohe Geschwindigkeiten.</p>
+</article>
+</div>
+</section><section class="info-section" id="technik-prinzipien">
+<div class="section-heading"><p class="eyebrow">Engineering-Prinzipien</p><h2>Was gute Sportwagentechnik leisten muss</h2></div>
+<div class="engineering-grid">
+<article class="engineering-card"><h3>Vorhersehbar</h3><p>Reaktionen müssen für den Fahrer verständlich und wiederholbar sein, nicht nur spektakulär.</p></article>
+<article class="engineering-card"><h3>Belastbar</h3><p>Bremsen, Kühlung und Antrieb müssen auch bei wiederholter Belastung zuverlässig arbeiten.</p></article>
+<article class="engineering-card"><h3>Abgestimmt</h3><p>Mehr Leistung ist nur sinnvoll, wenn Reifen, Fahrwerk, Aerodynamik und Bremsen dazu passen.</p></article>
+</div></section>
+<section class="info-section engineering-lab-section" id="engineering-lab">
+<div class="section-heading">
+<p class="eyebrow">Interaktives Systemverständnis</p>
+<h2>911 Engineering Lab</h2>
+<p>Wähle eine Fahrsituation und beobachte, wie Antrieb, Fahrwerk, Aerodynamik, Bremsen und Rückmeldung gemeinsam reagieren. Das Modul zeigt bewusst Zusammenhänge statt isolierter Einzelwerte.</p>
+</div>
+<div class="engineering-lab" data-engineering-lab="">
+<div aria-label="Fahrsituation wählen" class="lab-mode-switch" role="tablist">
+<button aria-selected="true" class="lab-mode is-active" data-mode="alltag" role="tab" type="button">Alltag</button>
+<button aria-selected="false" class="lab-mode" data-mode="nass" role="tab" type="button">Nässe</button>
+<button aria-selected="false" class="lab-mode" data-mode="kurve" role="tab" type="button">Dynamische Kurve</button>
+<button aria-selected="false" class="lab-mode" data-mode="track" role="tab" type="button">Rennstrecke</button>
+</div>
+<div class="lab-overview">
+<div aria-live="polite" class="lab-copy">
+<span class="lab-kicker" id="labKicker">Ausgewogene Abstimmung</span>
+<h3 id="labTitle">Entspannt und direkt im Alltag</h3>
+<p id="labDescription">Im normalen Straßenbetrieb arbeiten die Systeme zurückhaltend. Der Antrieb reagiert weich, das Fahrwerk filtert Unebenheiten und die Aerodynamik priorisiert Effizienz.</p>
+<div class="lab-status-line"><span>Systemziel</span><strong id="labGoal">Komfort, Effizienz und klare Rückmeldung</strong></div>
+</div>
+<div aria-hidden="true" class="lab-radar">
+<div class="radar-ring ring-1"></div><div class="radar-ring ring-2"></div><div class="radar-ring ring-3"></div>
+<div class="radar-core"><span>911</span><small id="labCoreMode">ROAD</small></div>
+<span class="radar-node node-drive">Antrieb</span><span class="radar-node node-chassis">Fahrwerk</span><span class="radar-node node-aero">Aero</span><span class="radar-node node-brake">Bremse</span>
+</div>
+</div>
+<div class="lab-systems">
+<article class="lab-system"><div><span>Antrieb</span><strong id="labDriveLabel">harmonisch</strong></div><div class="lab-meter"><i id="labDriveMeter" style="width:42%"></i></div><p id="labDriveText">Sanfte Gasannahme und frühe, komfortorientierte Gangwechsel.</p></article>
+<article class="lab-system"><div><span>Fahrwerk</span><strong id="labChassisLabel">komfortabel</strong></div><div class="lab-meter"><i id="labChassisMeter" style="width:38%"></i></div><p id="labChassisText">Adaptive Dämpfung hält die Karosserie ruhig und lässt Restkomfort zu.</p></article>
+<article class="lab-system"><div><span>Aerodynamik</span><strong id="labAeroLabel">effizient</strong></div><div class="lab-meter"><i id="labAeroMeter" style="width:30%"></i></div><p id="labAeroText">Luftführung und Kühlung arbeiten bedarfsgerecht mit geringerem Widerstand.</p></article>
+<article class="lab-system"><div><span>Bremsen &amp; Stabilität</span><strong id="labBrakeLabel">vorausschauend</strong></div><div class="lab-meter"><i id="labBrakeMeter" style="width:36%"></i></div><p id="labBrakeText">Regelsysteme bleiben im Hintergrund und greifen erst bei Bedarf ein.</p></article>
+</div>
+<div aria-label="Signalfluss der Fahrzeugsysteme" class="lab-flow">
+<span>Fahrerwunsch</span><i aria-hidden="true">→</i><span>Sensorik</span><i aria-hidden="true">→</i><span>Regelung</span><i aria-hidden="true">→</i><span>Aktoren</span><i aria-hidden="true">→</i><span>Rückmeldung</span>
+</div>
+</div>
+</section>
+<section class="info-section depth-section" id="technik-zukunft">
+<div class="section-heading">
+<p class="eyebrow">Aktuelle Entwicklungsrichtung</p>
+<h2>Elektrifizierung als Performance-Werkzeug</h2>
+<p>Beim aktuellen 911 Carrera GTS T-Hybrid verbindet Porsche einen neu entwickelten 3,6-Liter-Boxermotor mit einem elektrisch unterstützten Turbolader, einer Hochvoltbatterie und einem Elektromotor im verstärkten PDK. Ziel ist nicht elektrisches Fahren als Selbstzweck, sondern ein schnelleres Ansprechen und zusätzliche Systemleistung.</p>
+</div>
+<div class="depth-grid three">
+<article class="depth-card"><span class="depth-number">eTurbo</span><h3>Schneller Ladedruck</h3><p>Ein Elektromotor im Abgasturbolader kann das Verdichterrad unabhängig vom Abgasstrom beschleunigen. Dadurch steht Ladedruck schneller zur Verfügung.</p></article>
+<article class="depth-card"><span class="depth-number">PDK</span><h3>Elektrischer Zusatzschub</h3><p>Der im Getriebe integrierte Elektromotor unterstützt den Antrieb direkt und kann Energie zurückgewinnen. Mechanik und Elektronik arbeiten als ein System.</p></article>
+<article class="depth-card"><span class="depth-number">Aero</span><h3>Bedarfsgerechte Luftführung</h3><p>Aktive Kühlluftklappen und adaptive Elemente steuern Luftwiderstand, Kühlung und Stabilität situationsabhängig statt mit einer starren Einstellung.</p></article>
+</div>
+<p class="source-note">Fachliche Grundlage: offizielle Porsche-Presseinformationen zum 911 Carrera GTS T-Hybrid und zur aktiven Aerodynamik. Werte und Ausstattung können je nach Modell und Markt abweichen.</p>
+</section>
+</main><footer aria-labelledby="footer-title" class="site-footer">
+<div class="footer-shell">
+<section class="footer-lead">
+<div class="footer-brand-block">
+<a aria-label="Zur Startseite von Porsche Experience" class="footer-brand" href="index.html">
+<img alt="Porsche Experience Logo" decoding="async" height="96" loading="lazy" src="main web/images/porsche.webp" width="96"/>
+<span><small>Schul- &amp; Portfolio-Projekt</small><strong>Porsche Experience</strong></span>
+</a>
+<h2 id="footer-title">Eine interaktive Hommage an Technik, Geschichte und Design.</h2>
+<p>Konzipiert und umgesetzt als mehrseitige Webanwendung mit responsivem Design, eigener JavaScript-Logik und nachvollziehbarer Projektdokumentation.</p>
+</div>
+<div aria-label="Wichtige Projektaktionen" class="footer-lead-actions">
+<a class="footer-primary-action" href="Projekt.html">Projekt ansehen <span aria-hidden="true">↗</span></a>
+<a class="footer-secondary-action" href="README_Porsche_Experience.pdf">README-PDF <span aria-hidden="true">↓</span></a>
+</div>
+</section>
+<div aria-hidden="true" class="footer-rule"></div>
+<div class="footer-grid">
+<nav aria-label="Footer Bereich Entdecken" class="footer-column">
+<h3>Entdecken</h3>
+<a href="index.html">Startseite</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a aria-current="page" href="Technik.html">Technik</a>
+</nav>
+<nav aria-label="Footer Bereich Interaktiv" class="footer-column">
+<h3>Interaktiv</h3>
+<a href="Newsletter.html">Newsletter-Demo</a>
+<a href="qa.html">Fragen &amp; Antworten</a>
+<a href="shop.html">Demo-Shop</a>
+<a href="warenkorb.html">Warenkorb</a>
+</nav>
+<nav aria-label="Footer Bereich Dokumentation" class="footer-column">
+<h3>Dokumentation</h3>
+<a href="Projekt.html">Fallstudie</a>
+<a href="rechtliches.html#quellen">Quellen &amp; Einordnung</a>
+<a href="QUELLEN_UND_LIZENZEN.md">Lizenzübersicht</a>
+<a href="TESTPROTOKOLL.md">Testprotokoll</a>
+</nav>
+<section aria-label="Projektstatus" class="footer-status-card">
+<div class="footer-status-head"><span aria-hidden="true" class="footer-live-dot"></span><strong>Release 3.1</strong></div>
+<p>Funktionsfähige lokale Demo für Schule, Präsentation und privates Bewerbungsportfolio.</p>
+<div aria-label="Verwendete Technologien" class="footer-tech-list">
+<span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Underscore.js</span>
+</div>
+</section>
+</div>
+<div class="footer-bottom">
+<div class="footer-legal-copy">
+<strong>© 2026 Porsche Experience Schulprojekt</strong>
+<span>Inoffizielles Projekt. Keine Verbindung zur Porsche AG. Keine echten Bestellungen oder Zahlungen.</span>
+</div>
+<nav aria-label="Rechtliche und technische Links" class="footer-bottom-nav">
+<a href="rechtliches.html">Rechtliches</a>
+<a href="mailto:kraussj387@gmail.com">Kontakt</a>
+<a href="#top">Nach oben <span aria-hidden="true">↑</span></a>
+</nav>
+</div>
+</div>
+</footer>
+<script data-library="Underscore.js 1.13.4 (MIT)" defer="" src="global/underscore.min.js"></script><script defer="" src="Technik/script.js"></script>
+<script defer="" src="global/translate-interactive.js"></script>
+<script defer="" src="global/site-harmony.js"></script>
+</body>
+</html>

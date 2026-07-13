@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<!--
+  Porsche Experience – Schulprojekt
+  Hinweis: Diese Datei ist kommentiert, damit Aufbau, Navigation und Funktionen
+  in der Präsentation/Abgabe leichter erklärt werden können.
+-->
+<!-- =============================================================
+  CODE-KOMMENTARE: index.html
+  Zweck: Startseite mit Hero-Bereich, Navigation, Karussell und zentralen Projektinformationen.
+  Hinweis: Diese Kommentare erklären die Struktur für Präsentation,
+  Abgabe und spätere Bearbeitung. Sie verändern die sichtbare Seite nicht.
+============================================================= -->
+<html lang="de" translate="no">
+<head>
+<meta charset="utf-8"/>
+<meta content="notranslate" name="google"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Porsche Experience | Interaktives Schulprojekt</title>
+<meta content="Interaktives Schulprojekt über den Porsche 911 mit Geschichte, Modellvergleich, Technik, Suche, Medien, FAQ und Demo-Shop." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#0a0a0a" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Porsche Experience | Interaktives Schulprojekt" property="og:title"/>
+<meta content="Interaktives Schulprojekt über den Porsche 911 mit Geschichte, Modellvergleich, Technik, Suche, Medien, FAQ und Demo-Shop." property="og:description"/>
+<meta content="main%20web/images/porsche.webp" property="og:image"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="main web/style.css" rel="stylesheet"/>
+<link href="global/translate-interactive.css" rel="stylesheet"/>
+<link href="global/navigation-exact.css" rel="stylesheet"/>
+<meta content="Projektteam Porsche Experience: Daniel Wroblewski, David Hahn, Julian Krauß, Ibraham Nadeem und Falco Kneffel" name="author"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="dark" name="color-scheme"/><meta content="Porsche Experience Schulprojekt" property="og:site_name"/><meta content="Porsche Experience | Interaktives Schulprojekt" name="twitter:title"/><meta content="Interaktives Schulprojekt über den Porsche 911 mit Geschichte, Modellvergleich, Technik, Suche, Medien, FAQ und Demo-Shop." name="twitter:description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Porsche Experience",
+  "description": "Interaktives, inoffizielles Schulprojekt über Geschichte, Modelle und Technik des Porsche 911.",
+  "inLanguage": "de",
+  "educationalUse": "Schulprojekt und Portfolio",
+  "creator": [
+    {"@type":"Person","name":"Daniel Wroblewski"},
+    {"@type":"Person","name":"Julian Krauß"},
+    {"@type":"Person","name":"Ibraham Nadeem"},
+    {"@type":"Person","name":"Falco Kneffel"},
+    {"@type":"Person","name":"David Hahn"}
+  ]
+}</script><link href="global/site-harmony.css" rel="stylesheet"/><link href="global/content-media.css" rel="stylesheet"/>
+<link href="global/header-stable.css" rel="stylesheet"/>
+</head>
+<body data-page="home" id="top">
+<a class="skip-link" href="#main-content">Zum Hauptinhalt springen</a>
+<!-- Header: Logo, Schnellzugriff, Suche und Hauptnavigation. -->
+<header class="site-header">
+<!-- Markenbereich: Logo und Name des Schulprojekts. -->
+<div class="brand-area">
+<img alt="Logo Porsche Experience" class="brand-logo" decoding="async" fetchpriority="high" height="320" src="main web/images/porsche.png" width="320"/>
+<div class="brand-copy">
+<span>Schulprojekt</span>
+<p class="brand-title">Porsche Experience</p>
+</div>
+</div>
+<!-- Mobiler Menü-Button: öffnet/schließt die Navigation auf kleinen Bildschirmen. -->
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Menü öffnen" class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<!-- Navigationscontainer: enthält Schnellzugriffe, Suche und Menülinks. -->
+<div class="nav-menu" id="mainNav">
+<!-- Schnellzugriff: Icons für E-Mail, Rechtliches, FAQ und Warenkorb. -->
+<div aria-label="Schnellzugriff" class="action-area">
+<a aria-label="E-Mail" class="icon-link" href="mailto:kraussj387@gmail.com">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3.2V17h16V8.2l-7.35 5.25a1.1 1.1 0 0 1-1.3 0L4 8.2Zm1.55-1.2L12 11.6 18.45 7H5.55Z"></path></svg>
+</a>
+<a aria-label="Paragraf und Rechtliches" class="icon-link" href="rechtliches.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><text font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" text-anchor="middle" x="12" y="18.5">§</text></svg>
+</a>
+<a aria-label="Fragen und Antworten" class="icon-link" href="qa.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 12.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Zm0-10.1c2.1 0 3.7 1.35 3.7 3.2 0 1.5-.8 2.35-2.05 3.05-.75.42-.9.7-.9 1.35v.25h-2v-.35c0-1.4.55-2.15 1.85-3.1.8-.45 1.05-.8 1.05-1.4 0-.75-.65-1.25-1.65-1.25-.95 0-1.65.5-1.95 1.35l-1.8-.72c.55-1.55 1.95-2.58 3.75-2.58Z"></path></svg>
+</a>
+<a aria-label="Einkaufswagen" class="icon-link cart-highlight" href="warenkorb.html">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7.2 18.2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Zm10 0a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6ZM3 3a1 1 0 0 1 .96.72L4.35 5H21a1 1 0 0 1 .95 1.32l-2.2 6.6A3 3 0 0 1 16.9 15H8.1l.35 1H18a1 1 0 1 1 0 2H7.75a1.8 1.8 0 0 1-1.7-1.22L2.25 5H1a1 1 0 0 1 0-2h2Zm2 4 1.95 6H16.9a1 1 0 0 0 .95-.68L19.62 7H5Z"></path></svg>
+<span aria-hidden="true" class="cart-count-badge" data-cart-count="">0</span>
+</a>
+</div>
+<!-- Suche: durchsucht die wichtigsten Projektseiten und Inhalte. -->
+<form class="search-area" id="siteSearchForm" role="search">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M10.8 4a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Zm0 2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm5.4 9.2 4.3 4.3a1 1 0 0 1-1.4 1.4l-4.3-4.3 1.4-1.4Z"></path></svg>
+<input aria-autocomplete="list" aria-controls="siteSearchResults" aria-expanded="false" aria-label="Suche" autocomplete="off" id="siteSearchInput" placeholder="Suchen..." role="combobox" type="search"/>
+<button aria-label="Suche löschen" class="search-clear-btn" id="siteSearchClear" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.4 4.98 12 10.59l5.6-5.61L19.02 6.4 13.41 12l5.61 5.6-1.42 1.42L12 13.41l-5.6 5.61-1.42-1.42L10.59 12 4.98 6.4Z"></path></svg>
+</button>
+<div aria-label="Suchergebnisse" aria-live="polite" class="search-results" id="siteSearchResults" role="listbox"></div>
+</form>
+<!-- Hauptnavigation: Links zu den wichtigsten Unterseiten. -->
+<nav aria-label="Hauptnavigation" class="main-nav">
+<a aria-current="page" class="nav-active" href="index.html">Home</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a href="Technik.html">Technik</a>
+<a href="Newsletter.html">Newsletter</a>
+<a href="Projekt.html">Projekt</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+<div aria-hidden="true" class="intro-space layout-spacer"></div><h1 class="visually-hidden page-title-accessible">Porsche Experience</h1>
+<section aria-label="Porsche Experience Karussell" aria-live="off" aria-roledescription="Karussell" class="hero-carousel" id="projekt">
+<div aria-atomic="true" aria-live="polite" class="carousel-track">
+<article class="carousel-slide is-active" data-duration="3000" data-type="image">
+<img alt="Blaue Porsche-Silhouette mit beleuchteter Dachlinie und Porsche-Schriftzug" decoding="async" fetchpriority="high" height="640" src="main web/images/1.webp" width="1920"/>
+</article>
+<article class="carousel-slide" data-duration="85000" data-type="video">
+<video aria-label="Porsche-Fahrvideo im Karussell" autoplay="" loop="" muted="" playsinline="" poster="main web/images/1.webp" preload="metadata">
+<source src="main web/videos/Video3.mp4" type="video/mp4"/>
+</video>
+</article>
+<article class="carousel-slide" data-duration="3000" data-type="image">
+<img alt="Porsche Motiv als Bild" decoding="async" height="640" loading="lazy" src="main web/images/22.webp" width="1920"/>
+</article>
+</div>
+<button aria-label="Vorheriges Motiv" class="carousel-control carousel-prev" id="prevSlide" type="button">‹</button>
+<button aria-label="Nächstes Motiv" class="carousel-control carousel-next" id="nextSlide" type="button">›</button>
+<div aria-label="Karussell Auswahl" class="carousel-dots">
+<button aria-label="Motiv 1" aria-pressed="true" class="dot is-active" data-index="0" type="button"></button>
+<button aria-label="Motiv 2" aria-pressed="false" class="dot" data-index="1" type="button"></button>
+<button aria-label="Motiv 3" aria-pressed="false" class="dot" data-index="2" type="button"></button>
+</div>
+</section>
+<section class="gallery-section" id="gallery">
+<div class="section-heading home-intro-copy">
+<p>
+          Diese Website präsentiert den Porsche 911 nicht nur mit Bildern und Videos,
+          sondern erklärt auch seine Entwicklung, seine Modellgenerationen und die
+          wichtigsten technischen Ideen dahinter. Ziel ist eine Seite, die optisch
+          hochwertig wirkt und gleichzeitig inhaltlich verständlich bleibt.
+        </p>
+</div>
+<h2 class="visually-hidden">Kernbereiche der Webseite</h2><div class="info-grid">
+<article class="info-card">
+<h3>Geschichte verstehen</h3>
+<p>
+            Die Geschichte-Seite ordnet den 911 historisch ein: vom klassischen
+            Turbo-Auftritt über die letzte luftgekühlte Ära bis zur modernen 992-Generation.
+          </p>
+</article>
+<article class="info-card">
+<h3>Modelle vergleichen</h3>
+<p>
+            Die Modellseite zeigt, wie sich Form, Technik und Charakter des 911
+            verändert haben, ohne dass die typische Silhouette verloren gegangen ist.
+          </p>
+</article>
+<article class="info-card">
+<h3>Technik erklären</h3>
+<p>
+            Die Technik-Seite beschreibt Boxermotor, Getriebe, Fahrwerk, Aerodynamik
+            und digitale Systeme so, dass sie auch ohne Vorwissen verständlich sind.
+          </p>
+</article>
+</div><div class="project-story-grid section-extension"><div class="project-story-copy"><h2>Eine interaktive Hommage an Technik, Geschichte und Design.</h2><p>Das Projekt verbindet die Entwicklung des Porsche 911 mit einer klaren Nutzerführung, verständlichen Technik-Erklärungen und sichtbar funktionierenden Web-Komponenten. Gestaltung und Bedienung sollen dabei wie ein zusammenhängendes System wirken.</p></div><figure class="project-story-media"><img alt="Collage aus klassischen und modernen Porsche-911-Ansichten als Verbindung von Geschichte, Technik und Webdesign" decoding="async" height="675" loading="lazy" src="assets/content/home-project-overview.webp" width="1200"/></figure></div><aside class="project-disclaimer section-extension" id="schulprojekt-hinweis"><div><p class="eyebrow">Schulprojekt</p><h2>Hinweis zur Darstellung</h2><p>Diese Website ist ein inoffizielles Schulprojekt. Die Inhalte dienen der verständlichen Darstellung von Geschichte, Modellen und Technik. Marken- und Modellnamen werden ausschließlich im Rahmen des Projekts verwendet; eine offizielle Verbindung zum Fahrzeughersteller besteht nicht.</p></div></aside>
+</section>
+<section class="info-section" id="start-einordnung">
+<div class="section-heading">
+<p class="eyebrow">Einordnung</p>
+<h2>Warum der 911 im Mittelpunkt steht</h2>
+<p>
+          Der Porsche 911 ist seit 1963 eine der bekanntesten Sportwagen-Baureihen.
+          Besonders spannend ist, dass viele Grundideen erhalten blieben: flache Front,
+          markante Kotflügel, fließende Dachlinie, Heckmotor-Konzept und eine Form,
+          die über Generationen wiedererkennbar bleibt.
+        </p>
+</div>
+<div class="info-grid two">
+<article class="text-panel">
+<h3>Design mit Wiedererkennungswert</h3>
+<p>
+            Ein gutes Fahrzeugdesign erkennt man daran, dass es sich weiterentwickelt,
+            ohne seine Identität zu verlieren. Genau das macht den 911 für ein
+            Webseitenprojekt interessant.
+          </p>
+</article>
+<article class="text-panel">
+<h3>Gute Struktur für Besucher</h3>
+<p>
+            Die Website ist bewusst mehrseitig aufgebaut. Besucher sollen schnell
+            entscheiden können, ob sie Geschichte, Modelle, Technik, Newsletter,
+            Projektinformationen oder den Demo-Shop ansehen möchten.
+          </p>
+</article>
+</div>
+</section>
+<section class="info-section" id="experience-routen">
+<div class="section-heading"><p class="eyebrow">Drei Einstiege</p><h2>Wähle deinen Blick auf den 911</h2><p>Die Website ist nicht als lange Werbeseite aufgebaut. Jeder Bereich beantwortet eine andere Frage und führt gezielt weiter.</p></div>
+<div class="journey-grid">
+<article class="journey-card"><figure class="card-media"><img alt="Gegenüberstellung klassischer und moderner Porsche-911-Generationen" decoding="async" height="675" loading="lazy" src="assets/content/home-history-path.webp" width="1200"/></figure><div class="card-copy"><h3>Wie blieb die Form erkennbar?</h3><p>Entdecke Generationen, technische Wendepunkte und die Designmerkmale, die den 911 über Jahrzehnte zusammenhalten.</p><a href="geschichte.html">Zur Geschichte →</a></div></article>
+<article class="journey-card"><figure class="card-media"><img alt="Mehrere Porsche-911-Varianten im direkten visuellen Vergleich" decoding="async" height="675" loading="lazy" src="assets/content/home-model-path.webp" width="1200"/></figure><div class="card-copy"><h3>Welcher 911 passt zu welchem Zweck?</h3><p>Vergleiche Carrera, Targa, Turbo und GT-Modelle nach Charakter, Alltag, Emotion und Rennstreckenfokus.</p><a href="modelle.html#modellvergleich-lab">Zum Modellvergleich →</a></div></article>
+<article class="journey-card"><figure class="card-media"><img alt="Porsche 911 mit sichtbar dargestelltem Fahrwerk, Bremsanlage, Antrieb und Cockpit" decoding="async" height="675" loading="lazy" src="assets/content/home-tech-path.webp" width="1200"/></figure><div class="card-copy"><h3>Wie entsteht das Fahrerlebnis?</h3><p>Motor, Getriebe, Fahrwerk, Bremsen und Aerodynamik werden als zusammenhängendes System erklärt.</p><a href="Technik.html">Zur Technik →</a></div></article>
+</div><div class="info-section section-extension"><div class="editorial-quote"><blockquote>Ein glaubwürdiges Premium-Projekt erklärt nicht nur, was schön aussieht, sondern warum Gestaltung, Technik und Bedienung zusammenpassen.</blockquote></div></div></section>
+<section class="info-section depth-section" id="experience-architektur">
+<div class="section-heading">
+<p class="eyebrow">Nutzerführung</p>
+<h2>Eine Website, drei klare Ebenen</h2>
+<p>Die Inhalte sind so aufgebaut, dass Besucher zuerst entdecken, anschließend verstehen und danach selbst ausprobieren können. Dadurch wirkt das Projekt nicht wie eine Sammlung einzelner Seiten, sondern wie eine zusammenhängende Experience.</p>
+</div>
+<div class="depth-grid three">
+<article class="depth-card">
+<span class="depth-number">01</span>
+<h3>Entdecken</h3>
+<p>Geschichte, Modelle und starke Medien geben einen schnellen Einstieg in die Welt des 911. Jede Seite beantwortet dabei eine eigene Leitfrage.</p>
+<a href="geschichte.html">Historie öffnen</a>
+</article>
+<article class="depth-card">
+<span class="depth-number">02</span>
+<h3>Verstehen</h3>
+<p>Vergleichsmodule, Technik-Erklärungen und Q&amp;A zerlegen komplexe Themen in nachvollziehbare Zusammenhänge statt nur Daten aufzulisten.</p>
+<a href="Technik.html#engineering-lab">Engineering Lab starten</a>
+</article>
+<article class="depth-card">
+<span class="depth-number">03</span>
+<h3>Ausprobieren</h3>
+<p>Newsletter, Demo-Shop und Projektbereich zeigen, wie eine echte Website Besucher führt, Eingaben verarbeitet und Ergebnisse transparent zurückmeldet.</p>
+<a href="Projekt.html">Projektlogik ansehen</a>
+</article>
+</div>
+</section>
+</main><footer aria-labelledby="footer-title" class="site-footer">
+<div class="footer-shell">
+<section class="footer-lead">
+<div class="footer-brand-block">
+<a aria-current="page" aria-label="Zur Startseite von Porsche Experience" class="footer-brand" href="index.html">
+<img alt="Porsche Experience Logo" decoding="async" height="96" loading="lazy" src="main web/images/porsche.webp" width="96"/>
+<span><small>Schul- &amp; Portfolio-Projekt</small><strong>Porsche Experience</strong></span>
+</a>
+<h2 id="footer-title">Eine interaktive Hommage an Technik, Geschichte und Design.</h2>
+<p>Konzipiert und umgesetzt als mehrseitige Webanwendung mit responsivem Design, eigener JavaScript-Logik und nachvollziehbarer Projektdokumentation.</p>
+</div>
+<div aria-label="Wichtige Projektaktionen" class="footer-lead-actions">
+<a class="footer-primary-action" href="Projekt.html">Projekt ansehen <span aria-hidden="true">↗</span></a>
+<a class="footer-secondary-action" href="README_Porsche_Experience.pdf">README-PDF <span aria-hidden="true">↓</span></a>
+</div>
+</section>
+<div aria-hidden="true" class="footer-rule"></div>
+<div class="footer-grid">
+<nav aria-label="Footer Bereich Entdecken" class="footer-column">
+<h3>Entdecken</h3>
+<a aria-current="page" href="index.html">Startseite</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="modelle.html">Modelle</a>
+<a href="Technik.html">Technik</a>
+</nav>
+<nav aria-label="Footer Bereich Interaktiv" class="footer-column">
+<h3>Interaktiv</h3>
+<a href="Newsletter.html">Newsletter-Demo</a>
+<a href="qa.html">Fragen &amp; Antworten</a>
+<a href="shop.html">Demo-Shop</a>
+<a href="warenkorb.html">Warenkorb</a>
+</nav>
+<nav aria-label="Footer Bereich Dokumentation" class="footer-column">
+<h3>Dokumentation</h3>
+<a href="Projekt.html">Fallstudie</a>
+<a href="rechtliches.html#quellen">Quellen &amp; Einordnung</a>
+<a href="QUELLEN_UND_LIZENZEN.md">Lizenzübersicht</a>
+<a href="TESTPROTOKOLL.md">Testprotokoll</a>
+</nav>
+<section aria-label="Projektstatus" class="footer-status-card">
+<div class="footer-status-head"><span aria-hidden="true" class="footer-live-dot"></span><strong>Release 3.1</strong></div>
+<p>Funktionsfähige lokale Demo für Schule, Präsentation und privates Bewerbungsportfolio.</p>
+<div aria-label="Verwendete Technologien" class="footer-tech-list">
+<span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Underscore.js</span>
+</div>
+</section>
+</div>
+<div class="footer-bottom">
+<div class="footer-legal-copy">
+<strong>© 2026 Porsche Experience Schulprojekt</strong>
+<span>Inoffizielles Projekt. Keine Verbindung zur Porsche AG. Keine echten Bestellungen oder Zahlungen.</span>
+</div>
+<nav aria-label="Rechtliche und technische Links" class="footer-bottom-nav">
+<a href="rechtliches.html">Rechtliches</a>
+<a href="mailto:kraussj387@gmail.com">Kontakt</a>
+<a href="#top">Nach oben <span aria-hidden="true">↑</span></a>
+</nav>
+</div>
+</div>
+</footer>
+<script data-library="Underscore.js 1.13.4 (MIT)" defer="" src="global/underscore.min.js"></script><script defer="" src="main web/script.js"></script>
+<script defer="" src="global/translate-interactive.js"></script>
+<script defer="" src="global/site-harmony.js"></script>
+</body>
+</html>

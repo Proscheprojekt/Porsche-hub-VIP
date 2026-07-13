@@ -1,0 +1,14 @@
+PORSCHE EXPERIENCE – E-MAIL-VERSAND
+
+Diese Version enthaelt zwei Pakete:
+1. Die normale, sofort lauffaehige Website-Version.
+2. Eine Gmail-sichere E-Mail-Version.
+
+Warum gibt es eine E-Mail-Version?
+Gmail blockiert ZIP-Dateien mit enthaltenen .js-Dateien oft als Sicherheitsrisiko.
+Darum wurden in der E-Mail-Version alle JavaScript-Dateien in .js.txt umbenannt.
+
+Wichtig:
+- Die normale ZIP funktioniert sofort.
+- Die Gmail-sichere ZIP ist fuer den Versand per E-Mail gedacht.
+- Nach dem Entpacken muessen die .js.txt-Dateien wieder in .js umbenannt werden, damit alles direkt wieder normal laeuft.
