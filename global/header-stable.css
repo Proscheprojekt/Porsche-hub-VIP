@@ -1,0 +1,627 @@
+/* =============================================================
+   STABILER GLOBALER HEADER
+   Eine verbindliche Anordnung für alle Seiten und Viewports.
+   Desktop/Laptop: Marke | Icons | Suche | Navigation.
+   Tablet/Smartphone: Marke + Menüknopf; Inhalte in einem rechten Panel.
+   ============================================================= */
+
+.site-header,
+.site-header * {
+  box-sizing: border-box;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 14px !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  overflow: visible !important;
+  border: 1px solid var(--line, rgba(255,255,255,.12)) !important;
+  border-radius: var(--radius, 24px) !important;
+  background: var(--panel, rgba(24,26,29,.96)) !important;
+  box-shadow: var(--shadow, 0 18px 45px rgba(0,0,0,.34)) !important;
+  backdrop-filter: blur(18px);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Marke */
+.site-header .brand-area {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+.site-header .brand-logo {
+  display: block !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+}
+
+.site-header .brand-copy {
+  min-width: 0 !important;
+}
+
+.site-header .brand-copy span {
+  display: block !important;
+  margin: 0 0 5px !important;
+  color: var(--gold, #d3a65f) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.site-header .brand-title,
+.site-header .brand-copy h1 {
+  margin: 0 !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -.04em !important;
+  white-space: nowrap !important;
+}
+
+/* Schnellzugriff: feste Größen verhindern jegliches Verrutschen. */
+.site-header .action-area {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.site-header .icon-link {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: rgba(255,255,255,.055) !important;
+  border: 1px solid var(--line, rgba(255,255,255,.12)) !important;
+  transform: none !important;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease !important;
+}
+
+.site-header .icon-link svg {
+  display: block !important;
+  width: 21px !important;
+  height: 21px !important;
+  margin: 0 !important;
+  fill: currentColor !important;
+  color: #fff !important;
+  transform: none !important;
+}
+
+.site-header .icon-link:hover,
+.site-header .icon-link:focus-visible,
+.site-header .icon-link:active {
+  color: #fff !important;
+  transform: none !important;
+}
+
+.site-header .icon-link:hover,
+.site-header .icon-link:focus-visible {
+  background: rgba(255,255,255,.10) !important;
+  border-color: rgba(211,166,95,.58) !important;
+  box-shadow: 0 0 0 3px rgba(211,166,95,.10), 0 0 20px rgba(211,166,95,.18) !important;
+}
+
+.site-header .cart-highlight {
+  background: linear-gradient(135deg, rgba(226,57,52,.34), rgba(226,57,52,.13)) !important;
+  border-color: rgba(226,57,52,.65) !important;
+  animation: stableCartGlow 2.2s ease-in-out infinite !important;
+}
+
+.site-header .cart-highlight:hover,
+.site-header .cart-highlight:focus-visible {
+  box-shadow: 0 0 0 3px rgba(226,57,52,.10), 0 0 28px rgba(226,57,52,.46) !important;
+}
+
+.site-header .cart-highlight::before,
+.site-header .cart-highlight::after {
+  pointer-events: none !important;
+}
+
+@keyframes stableCartGlow {
+  0%, 100% { box-shadow: 0 0 18px rgba(226,57,52,.20); }
+  50% { box-shadow: 0 0 28px rgba(226,57,52,.46); }
+}
+
+/* Suche bleibt immer eine feste Pille; Ergebnisliste ist absolut. */
+.site-header .search-area {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--line, rgba(255,255,255,.12)) !important;
+  background: rgba(255,255,255,.055) !important;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease !important;
+}
+
+.site-header .search-area:focus-within {
+  border-color: rgba(211,166,95,.72) !important;
+  background: rgba(255,255,255,.08) !important;
+  box-shadow: 0 0 0 3px rgba(211,166,95,.12), 0 0 20px rgba(211,166,95,.14) !important;
+}
+
+.site-header .search-area > svg {
+  display: block !important;
+  flex: 0 0 19px !important;
+  width: 19px !important;
+  height: 19px !important;
+  margin: 0 !important;
+  fill: rgba(255,255,255,.66) !important;
+}
+
+.site-header .search-area input {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  color: #fff !important;
+  background: transparent !important;
+}
+
+.site-header .search-clear-btn {
+  flex: 0 0 26px !important;
+  width: 26px !important;
+  height: 26px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.site-header .search-clear-btn:hover,
+.site-header .search-clear-btn:focus-visible,
+.site-header .search-clear-btn:active {
+  transform: none !important;
+}
+
+.site-header .search-results {
+  position: absolute !important;
+  top: calc(100% + 1px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  z-index: 1100 !important;
+}
+
+/* Navigation: identische Höhe und Abstände auf jeder Seite. */
+.site-header .main-nav {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
+
+.site-header .main-nav a {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  border: 1px solid transparent !important;
+  color: rgba(255,255,255,.88) !important;
+  background: rgba(255,255,255,.035) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transform: none !important;
+  text-shadow: none !important;
+  box-shadow: 0 2px 7px rgba(0,0,0,.20) !important;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease !important;
+}
+
+.site-header .main-nav a:hover,
+.site-header .main-nav a:focus-visible,
+.site-header .main-nav a:active {
+  transform: none !important;
+}
+
+.site-header .main-nav a:hover,
+.site-header .main-nav a:focus-visible {
+  color: #fff !important;
+  background: rgba(211,166,95,.14) !important;
+  border-color: rgba(211,166,95,.36) !important;
+  box-shadow: 0 0 0 3px rgba(211,166,95,.08), 0 0 18px rgba(211,166,95,.18) !important;
+}
+
+.site-header .main-nav .nav-active {
+  color: #fff !important;
+  background: linear-gradient(135deg, var(--red, #e23934), #b91f1c) !important;
+  border-color: rgba(255,255,255,.17) !important;
+  box-shadow: 0 8px 20px rgba(226,57,52,.28) !important;
+}
+
+/* Die beiden fest hervorgehobenen Eckpunkte bleiben golden. */
+.site-header .main-nav a[href^="index.html"],
+.site-header .main-nav a[href^="Projekt.html"] {
+  color: #241a0c !important;
+  background: linear-gradient(135deg, #edca8e, var(--gold, #d3a65f)) !important;
+  border-color: rgba(255,244,214,.45) !important;
+  box-shadow: 0 5px 15px rgba(211,166,95,.28) !important;
+}
+
+.site-header .main-nav a[href^="index.html"]:hover,
+.site-header .main-nav a[href^="index.html"]:focus-visible,
+.site-header .main-nav a[href^="Projekt.html"]:hover,
+.site-header .main-nav a[href^="Projekt.html"]:focus-visible {
+  color: #241a0c !important;
+  background: linear-gradient(135deg, #f3d9ac, #dfb46b) !important;
+  border-color: rgba(255,244,214,.65) !important;
+  box-shadow: 0 0 0 3px rgba(211,166,95,.10), 0 0 22px rgba(211,166,95,.38) !important;
+}
+
+/* Newsletter: goldener Hintergrund-Glow mit pulsierender Premium-Leuchte. */
+.site-header .main-nav a[href^="Newsletter.html"] {
+  will-change: color, border-color, box-shadow !important;
+  animation: stableNewsletterGoldBlink 2s ease-in-out infinite !important;
+}
+
+@keyframes stableNewsletterGoldBlink {
+  0%, 32%, 100% {
+    color: rgba(255,255,255,.92);
+    border-color: rgba(211,166,95,.42);
+    box-shadow:
+      inset 0 0 0 100px rgba(211,166,95,.10),
+      0 2px 7px rgba(0,0,0,.20),
+      0 0 16px rgba(211,166,95,.24),
+      0 0 28px rgba(211,166,95,.10);
+  }
+  55%, 68% {
+    color: #241a0c;
+    border-color: rgba(255,244,214,.76);
+    box-shadow:
+      inset 0 0 0 100px rgba(231,191,119,.98),
+      0 5px 16px rgba(211,166,95,.34),
+      0 0 32px rgba(231,191,119,.76),
+      0 0 58px rgba(231,191,119,.36);
+  }
+}
+
+/* Burger: nur die Linien bewegen sich, niemals die Button-Geometrie. */
+.site-header .mobile-menu-btn {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+  border: 1px solid var(--line, rgba(255,255,255,.12)) !important;
+  background: rgba(255,255,255,.055) !important;
+  transform: none !important;
+}
+
+.site-header .mobile-menu-btn:hover,
+.site-header .mobile-menu-btn:focus-visible,
+.site-header .mobile-menu-btn:active {
+  transform: none !important;
+  border-color: rgba(211,166,95,.52) !important;
+  background: rgba(255,255,255,.09) !important;
+}
+
+/* =============================================================
+   PC UND LAPTOP
+   ============================================================= */
+@media (min-width: 1200px) {
+  .site-header {
+    display: grid !important;
+    grid-template-columns: minmax(220px, 1fr) auto clamp(170px, 16vw, 260px) auto !important;
+    grid-template-areas: "brand actions search navigation" !important;
+    align-items: center !important;
+    column-gap: 10px !important;
+    row-gap: 0 !important;
+    min-height: 106px !important;
+    padding: 14px 16px !important;
+  }
+
+  .site-header .brand-area {
+    grid-area: brand !important;
+    gap: 13px !important;
+  }
+
+  .site-header .brand-logo {
+    width: 68px !important;
+    height: 68px !important;
+    padding: 6px !important;
+    border-radius: 17px !important;
+  }
+
+  .site-header .brand-copy span { font-size: 10px !important; }
+  .site-header .brand-title,
+  .site-header .brand-copy h1 { font-size: clamp(21px, 1.7vw, 28px) !important; }
+
+  .site-header .nav-menu {
+    display: contents !important;
+  }
+
+  .site-header .action-area {
+    grid-area: actions !important;
+    gap: 6px !important;
+  }
+
+  .site-header .icon-link {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 14px !important;
+  }
+
+  .site-header .search-area {
+    grid-area: search !important;
+    width: 100% !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    padding: 0 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .site-header .main-nav {
+    grid-area: navigation !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    width: auto !important;
+  }
+
+  .site-header .main-nav a {
+    min-height: 42px !important;
+    padding: 0 clamp(8px, .72vw, 12px) !important;
+    border-radius: 999px !important;
+    font-size: clamp(13px, .88vw, 15px) !important;
+  }
+
+  .site-header .mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+/* Noch etwas kompakter auf kleineren Laptops, ohne Reihenfolgewechsel. */
+@media (min-width: 1200px) and (max-width: 1320px) {
+  .site-header {
+    grid-template-columns: minmax(205px, 1fr) auto 165px auto !important;
+    column-gap: 8px !important;
+    padding-inline: 13px !important;
+  }
+
+  .site-header .brand-area { gap: 10px !important; }
+  .site-header .brand-logo { width: 62px !important; height: 62px !important; }
+  .site-header .brand-title,
+  .site-header .brand-copy h1 { font-size: 21px !important; }
+  .site-header .icon-link { width: 40px !important; height: 40px !important; }
+  .site-header .action-area { gap: 5px !important; }
+  .site-header .search-area { height: 40px !important; min-height: 40px !important; padding-inline: 10px !important; }
+  .site-header .main-nav { gap: 4px !important; }
+  .site-header .main-nav a { min-height: 40px !important; padding-inline: 8px !important; font-size: 13px !important; }
+}
+
+/* =============================================================
+   TABLET UND SMARTPHONE
+   Das Panel liegt über dem Inhalt; beim Öffnen verschiebt sich nichts.
+   ============================================================= */
+@media (max-width: 1199px) {
+  .site-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-areas: "brand menu" !important;
+    align-items: center !important;
+    gap: 12px !important;
+    min-height: 96px !important;
+    padding: 12px 14px !important;
+  }
+
+  .site-header .brand-area {
+    grid-area: brand !important;
+    gap: 12px !important;
+  }
+
+  .site-header .brand-logo {
+    width: 64px !important;
+    height: 64px !important;
+    padding: 6px !important;
+    border-radius: 16px !important;
+  }
+
+  .site-header .brand-copy span { font-size: 10px !important; }
+  .site-header .brand-title,
+  .site-header .brand-copy h1 { font-size: clamp(20px, 3vw, 25px) !important; }
+
+  .site-header .mobile-menu-btn {
+    grid-area: menu !important;
+    display: grid !important;
+    place-items: center !important;
+    justify-self: end !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 15px !important;
+  }
+
+  .site-header .mobile-menu-btn span {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    display: block !important;
+    width: 22px !important;
+    height: 2px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    background: #fff !important;
+    transition: transform 220ms ease, opacity 180ms ease !important;
+  }
+
+  .site-header .mobile-menu-btn span:nth-child(1) { transform: translateY(-7px) !important; }
+  .site-header .mobile-menu-btn span:nth-child(2) { transform: translateY(0) !important; }
+  .site-header .mobile-menu-btn span:nth-child(3) { transform: translateY(7px) !important; }
+  .site-header .mobile-menu-btn[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg) !important; }
+  .site-header .mobile-menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0 !important; }
+  .site-header .mobile-menu-btn[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg) !important; }
+
+  .site-header .nav-menu {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 1050 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    width: min(430px, calc(100vw - 36px)) !important;
+    max-height: calc(100vh - 130px) !important;
+    margin: 0 !important;
+    padding: 18px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    border: 1px solid var(--line, rgba(255,255,255,.12)) !important;
+    border-radius: 22px !important;
+    background: rgba(18,20,23,.985) !important;
+    box-shadow: 0 24px 60px rgba(0,0,0,.48) !important;
+    transform: translateX(18px) !important;
+    transition: opacity 220ms ease, transform 260ms ease, visibility 0s linear 260ms !important;
+  }
+
+  .site-header .nav-menu.is-open {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateX(0) !important;
+    transition: opacity 220ms ease, transform 260ms ease, visibility 0s linear 0s !important;
+  }
+
+  .site-header .action-area {
+    order: 1 !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .site-header .icon-link {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 14px !important;
+  }
+
+  .site-header .search-area {
+    order: 2 !important;
+    width: 100% !important;
+    height: 46px !important;
+    min-height: 46px !important;
+    padding: 0 13px !important;
+    border-radius: 14px !important;
+  }
+
+  .site-header .main-nav {
+    order: 3 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .site-header .main-nav a {
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 0 12px !important;
+    border-radius: 13px !important;
+    font-size: 14px !important;
+  }
+
+  .site-header .language-widget.is-in-menu {
+    order: 4 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    top: 8px !important;
+    min-height: 80px !important;
+    padding: 10px 11px !important;
+    gap: 9px !important;
+  }
+
+  .site-header .brand-area { gap: 9px !important; }
+  .site-header .brand-logo { width: 56px !important; height: 56px !important; border-radius: 14px !important; }
+  .site-header .brand-copy span { font-size: 9px !important; margin-bottom: 4px !important; }
+  .site-header .brand-title,
+  .site-header .brand-copy h1 { font-size: clamp(17px, 5vw, 20px) !important; }
+  .site-header .mobile-menu-btn { width: 46px !important; height: 46px !important; }
+
+  .site-header .nav-menu {
+    top: calc(100% + 8px) !important;
+    right: 0 !important;
+    width: calc(100vw - 20px) !important;
+    max-height: calc(100vh - 108px) !important;
+    padding: 15px !important;
+    border-radius: 19px !important;
+  }
+
+  .site-header .main-nav {
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header .brand-logo { width: 50px !important; height: 50px !important; }
+  .site-header .brand-title,
+  .site-header .brand-copy h1 { font-size: 16.5px !important; }
+  .site-header .mobile-menu-btn { width: 44px !important; height: 44px !important; }
+  .site-header .nav-menu { width: calc(100vw - 16px) !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header *,
+  .site-header *::before,
+  .site-header *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =============================================================
+   NEWSLETTER-GLOW: nur der Button-Hintergrund pulsiert in Gold.
+   Schrift, Rahmen und Schatten bleiben unverändert.
+   ============================================================= */
+.site-header .main-nav a[href^="Newsletter.html"] {
+  color: rgba(255, 255, 255, 0.88) !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.20) !important;
+  animation: none !important;
+  transition: background 320ms ease !important;
+}
+
+.site-header .main-nav a[href^="Newsletter.html"].newsletter-glow-active {
+  color: rgba(255, 255, 255, 0.88) !important;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(242, 204, 137, 0.64) 0%, rgba(211, 166, 95, 0.42) 52%, rgba(211, 166, 95, 0.20) 100%) !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.20) !important;
+}
+
+.site-header .main-nav a[href^="Newsletter.html"]:hover,
+.site-header .main-nav a[href^="Newsletter.html"]:focus-visible {
+  color: rgba(255, 255, 255, 0.88) !important;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 224, 164, 0.82) 0%, rgba(226, 183, 105, 0.62) 48%, rgba(211, 166, 95, 0.38) 100%) !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.20) !important;
+}

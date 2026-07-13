@@ -1,0 +1,331 @@
+/* =============================================================
+   GEMEINSAME MEDIENKOMPONENTEN DER INHALTSSEITEN
+   Bilder, Karten und dynamische Inhalte nutzen dieselben Abstände,
+   Seitenverhältnisse und responsiven Regeln.
+   ============================================================= */
+
+/* Gemeinsame Rasterbasis. Einige ältere Seitendateien definierten diese
+   Raster nur lokal; die zentrale Regel verhindert abweichende Darstellungen. */
+.journey-grid,
+.dna-grid,
+.quality-grid,
+.decision-grid,
+.engineering-grid,
+.edition-grid {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Vier gleichwertige Erwartungskarten nutzen auf großen Displays eine Reihe. */
+.decision-grid:has(> :nth-child(4):last-child) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card-media,
+.project-story-media,
+.tech-topic-visual,
+.comparison-media {
+  margin: 0;
+  overflow: hidden;
+  background: #090b0e;
+}
+
+.card-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--fc-line, rgba(255,255,255,.12));
+}
+
+.card-media--compact {
+  aspect-ratio: 2.15 / 1;
+}
+
+.card-media--editorial {
+  aspect-ratio: 16 / 8.5;
+}
+
+.card-media img,
+.project-story-media img,
+.tech-topic-visual img,
+.comparison-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-copy {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: clamp(20px, 2.4vw, 28px);
+}
+
+.card-copy > :first-child {
+  margin-top: 0;
+}
+
+.card-copy > :last-child {
+  margin-bottom: 0;
+}
+
+.card-copy > a:last-child {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.info-card:has(> .card-media),
+.journey-card:has(> .card-media),
+.dna-card:has(> .card-media),
+.decision-card:has(> .card-media),
+.edition-card:has(> .card-media),
+.depth-card:has(> .card-media),
+.expertise-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.info-card:has(> .card-media),
+.journey-card:has(> .card-media),
+.dna-card:has(> .card-media),
+.decision-card:has(> .card-media),
+.edition-card:has(> .card-media),
+.depth-card:has(> .card-media),
+.expertise-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.home-intro-copy {
+  margin-top: 0;
+}
+
+.home-intro-copy > p {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.75;
+}
+
+.project-story-grid {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--fc-line-strong, rgba(215,180,90,.28));
+  border-radius: var(--fc-radius-lg, 28px);
+  background: linear-gradient(135deg, rgba(211,166,95,.09), rgba(18,20,24,.94) 45%, rgba(226,57,52,.06));
+  box-shadow: var(--fc-shadow, 0 24px 70px rgba(0,0,0,.35));
+}
+
+.project-story-copy h2 {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 4.4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+
+.project-story-copy p {
+  margin: 0;
+  color: var(--fc-muted, #b8bbc1);
+  line-height: 1.75;
+}
+
+.project-story-media {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--fc-line, rgba(255,255,255,.12));
+  border-radius: 22px;
+  box-shadow: 0 24px 55px rgba(0,0,0,.34);
+}
+
+.project-disclaimer {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+  padding: clamp(24px, 3.5vw, 38px);
+  border: 1px solid rgba(215,180,90,.26);
+  border-left: 4px solid var(--fc-gold, #d7b45a);
+  border-radius: 0 22px 22px 0;
+  background: rgba(211,166,95,.065);
+}
+
+.project-disclaimer h2 {
+  margin: 4px 0 12px;
+  font-size: clamp(26px, 3vw, 40px);
+}
+
+.project-disclaimer p:last-child {
+  max-width: 920px;
+  margin-bottom: 0;
+  color: var(--fc-muted, #b8bbc1);
+  line-height: 1.7;
+}
+
+.team-history-section .section-heading {
+  max-width: 980px;
+}
+
+/* Dynamischer Modellvergleich */
+.comparison-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.comparison-media {
+  aspect-ratio: 16 / 8.7;
+  border-bottom: 1px solid var(--fc-line, rgba(255,255,255,.12));
+}
+
+.comparison-card-body {
+  padding: clamp(20px, 2.7vw, 28px);
+}
+
+.comparison-card-body .compare-kicker {
+  margin: 0 0 6px;
+}
+
+.compare-score-list {
+  margin-top: 14px;
+}
+
+/* Technik-Tabs: ein Bild wird gemeinsam mit dem aktiven Panel aktualisiert. */
+.tech-topic-layout {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(20px, 3.5vw, 38px);
+  align-items: stretch;
+}
+
+.tech-topic-visual {
+  min-height: 100%;
+  aspect-ratio: auto;
+  border: 1px solid var(--fc-line, rgba(255,255,255,.12));
+  border-radius: 28px;
+  box-shadow: var(--fc-shadow, 0 24px 70px rgba(0,0,0,.35));
+}
+
+.tech-topic-layout .tech-panels {
+  width: 100%;
+  margin: 0;
+}
+
+.tech-topic-layout .tech-panel {
+  min-height: 100%;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+}
+
+.tech-panel[hidden] {
+  display: none;
+}
+
+/* Expertise-Bereich mit belegten Beiträgen. */
+.expertise-grid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.expertise-card {
+  border: 1px solid var(--fc-line, rgba(255,255,255,.12));
+  border-radius: 22px;
+  background: rgba(255,255,255,.035);
+  box-shadow: 0 18px 48px rgba(0,0,0,.22);
+}
+
+.expertise-person {
+  margin: 0 0 8px;
+  color: var(--fc-gold-light, #ecd18f);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.expertise-card h3 {
+  margin: 0 0 12px;
+  font-size: clamp(24px, 2.6vw, 34px);
+}
+
+.expertise-card .card-copy > p:last-child {
+  color: var(--fc-muted, #b8bbc1);
+  line-height: 1.72;
+}
+
+@media (max-width: 900px) {
+  .project-story-grid,
+  .tech-topic-layout,
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-story-media {
+    order: 2;
+  }
+
+  .tech-topic-visual {
+    min-height: 340px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-story-grid,
+  .project-disclaimer {
+    padding: 22px;
+  }
+
+  .project-story-copy h2 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .card-copy,
+  .comparison-card-body {
+    padding: 20px;
+  }
+
+  .tech-topic-visual {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .journey-grid,
+  .dna-grid,
+  .quality-grid,
+  .decision-grid,
+  .engineering-grid,
+  .edition-grid,
+  .decision-grid:has(> :nth-child(4):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .journey-grid,
+  .dna-grid,
+  .quality-grid,
+  .decision-grid,
+  .engineering-grid,
+  .edition-grid,
+  .decision-grid:has(> :nth-child(4):last-child) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Motor-/Technikgrafiken vollständig anzeigen, ohne wichtige Fahrzeugteile abzuschneiden. */
+.tech-topic-visual img {
+  object-fit: contain;
+  object-position: center;
+  background: #050709;
+}
