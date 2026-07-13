@@ -1,7 +1,0 @@
-Modellkarten aktualisiert:
-- Targa-Bild durch das neue Schwarzwald-Motiv ersetzt.
-- Turbo-&-GT-Bild durch das neue Rennstrecken-Motiv ersetzt.
-- Eingebettete Textbereiche der Ausgangsbilder durch sauberen Bildzuschnitt entfernt.
-- Kartenbeschreibungen unter beiden Bildern entfernt.
-- Carrera, Targa und Turbo & GT sind jetzt vollständig anklickbare Bildkarten.
-- Gemeinsame Lightbox mit Schließen-Button, Außenklick und Escape-Unterstützung.

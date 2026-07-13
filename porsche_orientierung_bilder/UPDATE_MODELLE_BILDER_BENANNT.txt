@@ -1,9 +1,0 @@
-Alle Modellbilder im Slider und in den Vergleichsbereichen wurden durch die neuen Dateien ersetzt und semantisch benannt:
-- carrera-coupe.webp
-- carrera-cabriolet.webp
-- carrera-gts.webp
-- targa.webp
-- turbo.webp
-- turbo-cabriolet.webp
-- gt3.webp
-- gt3-rs.webp

@@ -1,1 +1,0 @@
-Newsletter-Button an den roten Warenkorb-Stil angepasst: gold getönter Hintergrund und goldene Pulsanimation im 2-Sekunden-Takt.

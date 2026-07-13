@@ -1,4 +1,0 @@
-Änderung:
-- Das bisherige Motor-Platzhalterbild auf der Technik-Seite wurde durch die neue Boxermotor-/Heckmotor-Grafik ersetzt.
-- Die Grafik wird vollständig und zentriert dargestellt, ohne wichtige Fahrzeugteile abzuschneiden.
-- Alle bestehenden Tabs, Texte, Navigationen und Funktionen bleiben unverändert.

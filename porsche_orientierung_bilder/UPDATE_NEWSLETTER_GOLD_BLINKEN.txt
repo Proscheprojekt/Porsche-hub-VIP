@@ -1,7 +1,0 @@
-ÄNDERUNG: NEWSLETTER-BUTTON GOLD BLINKEND
-
-- Der Newsletter-Button in der Hauptnavigation pulsiert nun alle 2 Sekunden.
-- Während des Pulses wird der komplette Button-Hintergrund gold.
-- Die Schrift wechselt für gute Lesbarkeit kurz auf Dunkel.
-- Die Änderung gilt auf allen Projektseiten über global/header-stable.css.
-- Bei aktivierter Systemoption „Bewegung reduzieren“ bleibt die Animation aus Barrierefreiheitsgründen deaktiviert.
